@@ -2,7 +2,8 @@
 #define StaticKey_h
 
 // Server API:
-#define kBaseServer @"https://clip-sub.com//wp-json/wp/v2/"
+#define kBaseServer @"https://clip-sub.com/wp-json/wp/v2/"
+#define kBaseAuthServer @"https://clip-sub.com/api/"
 #define kRootUrl @"https://clip-sub.com/"
 
 #pragma mark -- Colors

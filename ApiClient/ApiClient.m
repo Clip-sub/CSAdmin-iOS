@@ -1,13 +1,18 @@
 #import "ApiClient.h"
 
-
 @implementation ApiClient
 
 + (ApiClient *)sharedClient {
     static ApiClient *_sharedClient = nil;
+    static ApiClient *_sharedAuthClient = nil;
     static dispatch_once_t oneTimeToken;
     dispatch_once(&oneTimeToken, ^{
         _sharedClient = [[ApiClient alloc] initWithBaseURL:[NSURL URLWithString:kBaseServer]];
+    });
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedAuthClient = [[ApiClient alloc] initWithBaseURL:[NSURL URLWithString:kBaseAuthServer]];
     });
     
     return _sharedClient;

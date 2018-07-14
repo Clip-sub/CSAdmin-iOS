@@ -2,12 +2,13 @@
 #import "AFNetworking.h"
 #import "ResponseObject.h"
 
-/*
- * The app's main API client.
+/**
+ * Api client for authorization.
+ Same server but different base URL, so I decided to create another instance for it.
  */
-@interface ApiClient : AFHTTPSessionManager
+@interface ApiAuthClient : AFHTTPSessionManager
 
-+ (ApiClient *) sharedClient;
++ (ApiAuthClient *) sharedAuthClient;
 
 - (void) onSuccess: (id) responseData success:(void (^)(ResponseObject *responseObject)) successBlock;
 

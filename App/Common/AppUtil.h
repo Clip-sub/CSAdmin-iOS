@@ -8,6 +8,9 @@
 + (BOOL) isEmpty:(NSString*) value;
 + (BOOL) isValidEmail:(NSString*) email;
 
-+ (BOOL) getCurrentDeviceID;
++ (NSString *) getCurrentDeviceID;
+
+# pragma mark -- Color utils
++ (UIColor *) getUIColorFromRGB: (NSString *) rgbColor;
 
 @end

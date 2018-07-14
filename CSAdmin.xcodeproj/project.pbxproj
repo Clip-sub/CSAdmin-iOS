@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
 		ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72120F8AE2A009B4725 /* ApiClient+User.m */; };
+		ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */; };
 		ED26165420F7E33C0063957E /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26165320F7E33C0063957E /* AppUtil.m */; };
 		ED26165720F7E5AA0063957E /* CSNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED26165620F7E5AA0063957E /* CSNavigationViewController.m */; };
+		ED285C4620FA89780070A63C /* UIApplication+UIID.m in Sources */ = {isa = PBXBuildFile; fileRef = ED285C4520FA89780070A63C /* UIApplication+UIID.m */; };
+		ED285C4A20FA8F880070A63C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED285C4920FA8F880070A63C /* Security.framework */; };
 		ED288AE420F3FC4B007339EF /* PostItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED288AE320F3FC4B007339EF /* PostItemTableCell.m */; };
 		ED2BDA9E20E4C8E900D7A8D7 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BDA9C20E4C8E900D7A8D7 /* HomeTabViewController.m */; };
 		ED2BDAA420E4D6A100D7A8D7 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */; };
@@ -135,10 +138,15 @@
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
 		ED23B72020F8AE2A009B4725 /* ApiClient+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+User.h"; sourceTree = "<group>"; };
 		ED23B72120F8AE2A009B4725 /* ApiClient+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+User.m"; sourceTree = "<group>"; };
+		ED23B72520F8C5BD009B4725 /* ApiAuthClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiAuthClient.h; sourceTree = "<group>"; };
+		ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiAuthClient.m; sourceTree = "<group>"; };
 		ED26165220F7E33C0063957E /* AppUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUtil.h; sourceTree = "<group>"; };
 		ED26165320F7E33C0063957E /* AppUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUtil.m; sourceTree = "<group>"; };
 		ED26165520F7E5AA0063957E /* CSNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSNavigationViewController.h; sourceTree = "<group>"; };
 		ED26165620F7E5AA0063957E /* CSNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSNavigationViewController.m; sourceTree = "<group>"; };
+		ED285C4520FA89780070A63C /* UIApplication+UIID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+UIID.m"; sourceTree = "<group>"; };
+		ED285C4720FA89850070A63C /* UIApplication+UIID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+UIID.h"; sourceTree = "<group>"; };
+		ED285C4920FA8F880070A63C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ED288AE220F3FC4B007339EF /* PostItemTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostItemTableCell.h; sourceTree = "<group>"; };
 		ED288AE320F3FC4B007339EF /* PostItemTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostItemTableCell.m; sourceTree = "<group>"; };
 		ED2BDA9B20E4C8E900D7A8D7 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
@@ -222,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED285C4A20FA8F880070A63C /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +281,23 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		ED285C3D20FA88BB0070A63C /* UIApplication-UIID */ = {
+			isa = PBXGroup;
+			children = (
+				ED285C4720FA89850070A63C /* UIApplication+UIID.h */,
+				ED285C4520FA89780070A63C /* UIApplication+UIID.m */,
+			);
+			path = "UIApplication-UIID";
+			sourceTree = "<group>";
+		};
+		ED285C4820FA8F880070A63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED285C4920FA8F880070A63C /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED2BDA9A20E4BD6E00D7A8D7 /* HomeArea */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +335,8 @@
 		ED487BDA20EA03CB000D4FFB /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				ED23B72520F8C5BD009B4725 /* ApiAuthClient.h */,
+				ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */,
 				ED487C9620EA06F0000D4FFB /* ApiClient.h */,
 				ED487C9720EA06F0000D4FFB /* ApiClient.m */,
 				ED23B71D20F891CC009B4725 /* ApiClient+Post.h */,
@@ -322,6 +350,7 @@
 		ED487BDB20EA04A3000D4FFB /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				ED285C3D20FA88BB0070A63C /* UIApplication-UIID */,
 				ED487CA620EA1AFA000D4FFB /* AFNetworking */,
 			);
 			path = Libraries;
@@ -388,6 +417,7 @@
 				EDB0144420E20266006DED66 /* CSAdminTests */,
 				EDB0144F20E20266006DED66 /* CSAdminUITests */,
 				EDB0142A20E20263006DED66 /* Products */,
+				ED285C4820FA8F880070A63C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -723,9 +753,11 @@
 				ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */,
 				EDB0143C20E20266006DED66 /* main.m in Sources */,
 				EDD033A820F1622E00BFBC3F /* AFSecurityPolicy.m in Sources */,
+				ED285C4620FA89780070A63C /* UIApplication+UIID.m in Sources */,
 				EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */,
 				ED26165720F7E5AA0063957E /* CSNavigationViewController.m in Sources */,
 				ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */,
+				ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */,
 				ED2BDAA420E4D6A100D7A8D7 /* PostListViewController.m in Sources */,
 				ED487C9820EA06F0000D4FFB /* ApiClient.m in Sources */,
 				EDD033AE20F1622E00BFBC3F /* UIActivityIndicatorView+AFNetworking.m in Sources */,

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED0136D820FD3A88002B64F6 /* HomeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
 		ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72120F8AE2A009B4725 /* ApiClient+User.m */; };
 		ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */; };
@@ -134,6 +135,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBar.xib; sourceTree = "<group>"; };
 		ED0BB1D420F883050069146C /* CS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS-Prefix.pch"; sourceTree = "<group>"; };
 		ED23B71D20F891CC009B4725 /* ApiClient+Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Post.h"; sourceTree = "<group>"; };
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			children = (
 				ED2BDAA620E4E33F00D7A8D7 /* LatestCommentsViewController */,
 				ED2BDAA020E4CAC100D7A8D7 /* PostListViewController */,
+				ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */,
 				ED2BDA9B20E4C8E900D7A8D7 /* HomeTabViewController.h */,
 				ED2BDA9C20E4C8E900D7A8D7 /* HomeTabViewController.m */,
 			);
@@ -725,6 +728,7 @@
 				ED4240E220F4708A0077D8C6 /* PostListViewController.xib in Resources */,
 				ED50F96D20E23CDE006EF430 /* Firis.png in Resources */,
 				EDD033B320F1633D00BFBC3F /* PostItemTableCell.xib in Resources */,
+				ED0136D820FD3A88002B64F6 /* HomeTabBar.xib in Resources */,
 				ED3F3AD420F3F73D00EACBDC /* Placeholder.png in Resources */,
 				EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */,
 				ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */,

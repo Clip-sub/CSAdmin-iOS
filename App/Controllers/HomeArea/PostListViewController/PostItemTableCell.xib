@@ -32,9 +32,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Excerpt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Nl-j5k">
-                        <rect key="frame" x="120" y="49" width="72" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Excerpt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Nl-j5k">
+                        <rect key="frame" x="120" y="34" width="300" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="4lO-Tm-J3o"/>
+                            <constraint firstAttribute="width" constant="300" id="rOQ-tN-oz9"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69745818661971826" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -43,9 +46,11 @@
                 <constraints>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="top" secondItem="E1Q-f5-3tM" secondAttribute="top" id="1Gv-HV-aUz"/>
                     <constraint firstAttribute="trailing" secondItem="Crv-xU-zrA" secondAttribute="trailing" constant="20" id="6tE-ja-WTl"/>
+                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="leading" secondItem="Crv-xU-zrA" secondAttribute="leading" id="DY4-KQ-t0A"/>
                     <constraint firstAttribute="bottom" secondItem="Ke5-ML-ztv" secondAttribute="bottom" id="FHw-cR-chk"/>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="leading" secondItem="E1Q-f5-3tM" secondAttribute="leading" id="Phg-vB-dGL"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="leading" secondItem="Ke5-ML-ztv" secondAttribute="trailing" constant="20" id="ckg-G6-tsp"/>
+                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="top" secondItem="Crv-xU-zrA" secondAttribute="bottom" constant="8" symbolic="YES" id="lQd-X3-E86"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="top" secondItem="E1Q-f5-3tM" secondAttribute="top" constant="8" id="nx1-H9-TH3"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="leading" secondItem="Ke5-ML-ztv" secondAttribute="trailing" constant="20" id="oAK-x8-LuI"/>
                 </constraints>

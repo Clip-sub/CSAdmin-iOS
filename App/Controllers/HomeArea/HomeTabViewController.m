@@ -32,8 +32,8 @@
     [[controllers objectAtIndex:0] setTitle:@"Home"];
     [[controllers objectAtIndex:1] setTitle:@"Comments"];
     
-    // NSArray *tabBarItems = self.tabBar.items;
-    // [[tabBarItems objectAtIndex:0] setImage:[UIImage imageNamed:@"Firis.png"]];
+    NSArray *tabBarItems = self.tabBar.items;
+    [[tabBarItems objectAtIndex:0] setImage:[UIImage imageNamed:@"Comment"]];
 }
 
 /*

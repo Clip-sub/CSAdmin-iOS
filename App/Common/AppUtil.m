@@ -2,6 +2,12 @@
 
 @implementation AppUtil
 
++ (AppDelegate *)appDelegate {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    return delegate;
+}
+
 + (BOOL)isEmpty:(NSString *)value {
     if (value == nil || value == NULL || [value isEqual:[NSNull null]] || [value isEqualToString:@""]) {
         return TRUE;

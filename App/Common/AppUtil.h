@@ -3,6 +3,8 @@
 
 @interface AppUtil : NSObject
 
++ (AppDelegate *) appDelegate;
+
 #pragma mark -- Text utils
 
 + (BOOL) isEmpty:(NSString*) value;

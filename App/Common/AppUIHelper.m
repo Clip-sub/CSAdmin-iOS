@@ -3,6 +3,18 @@
 
 @implementation AppUIHelper
 
++ (UIViewController *)visibleViewController {
+    UIViewController *rootViewController = [AppUtil appDelegate].window.rootViewController;
+    return nil;
+}
+
++ (UIViewController *) getVisibleViewControllerFrom:(UIViewController *) vc {
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        return [AppUIHelper getVisibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
+    }
+    if ()
+}
+
 + (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message {
     if ([AppUtil isEmpty:title]) {
         title = @"";

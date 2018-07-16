@@ -2,6 +2,8 @@
 
 @interface AppUIHelper : NSObject
 
++ (UIViewController *) visibleViewController;
+
 + (void) showAlertViewWithTitle: (NSString *) title andMessage:(NSString *) message;
 
 @end

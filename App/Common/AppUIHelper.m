@@ -5,14 +5,23 @@
 
 + (UIViewController *)visibleViewController {
     UIViewController *rootViewController = [AppUtil appDelegate].window.rootViewController;
-    return nil;
+    return [AppUIHelper getVisibleViewControllerFrom:rootViewController];
 }
 
 + (UIViewController *) getVisibleViewControllerFrom:(UIViewController *) vc {
     if ([vc isKindOfClass:[UINavigationController class]]) {
         return [AppUIHelper getVisibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
     }
-    if ()
+
+    if ([vc isKindOfClass:[UITabBarController class]]) {
+        return [AppUIHelper getVisibleViewControllerFrom:[((UITabBarController *) vc) selectedViewController]];
+    }
+
+    if (vc.presentedViewController) {
+        return nil;
+    }
+
+    return nil;
 }
 
 + (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message {

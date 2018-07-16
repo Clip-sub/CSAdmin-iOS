@@ -12,5 +12,6 @@
 
 # pragma mark -- Color utils
 + (UIColor *) getUIColorFromRGB: (NSString *) rgbColor;
++ (UIColor *) getUIColorFromRGB: (NSString *) rgbColor withAlpha:(CGFloat) alpha;
 
 @end

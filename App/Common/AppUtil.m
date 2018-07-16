@@ -6,10 +6,23 @@
     if (value == nil || value == NULL || [value isEqual:[NSNull null]] || [value isEqualToString:@""]) {
         return TRUE;
     }
+    if (value.length == 0) {
+        return TRUE;
+    }
     if ([[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
         return TRUE;
     }
     return FALSE;
+}
+
++ (BOOL)isValidEmail:(NSString *)email {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    
+    if ([emailTest evaluateWithObject:[email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]] == NO) {
+        return FALSE;
+    }
+    return TRUE;
 }
 
 // Convert RGB color to UIColor.
@@ -48,6 +61,12 @@
 + (NSString *)getCurrentDeviceID {
     NSString *uuid = [[UIApplication sharedApplication] uniqueInstallationIdentifier];
     return uuid;
+}
+
++ (NSString *)base64Encode:(NSString *)value {
+    NSData *nsdata = [value dataUsingEncoding:NSUTF8StringEncoding];
+    
+    return [NSString stringWithFormat:@"thumb/%@", [nsdata base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]];
 }
 
 @end

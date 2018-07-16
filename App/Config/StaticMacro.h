@@ -19,4 +19,7 @@
 /** String: iPad **/
 #define DEVICE_IPAD @"iPad"
 
+#define DEVICE_MODEL_LOCALIZED ( [[UIDevice currentDevice ] localizedModel ] )
+#define SETLOCALIZED(string) NSLocalizedString(string, nil)
+
 #endif /* StaticMacro_h */

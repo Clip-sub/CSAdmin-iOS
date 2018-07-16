@@ -51,6 +51,7 @@
 		EDD033B020F1622E00BFBC3F /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0339F20F1622D00BFBC3F /* AFAutoPurgingImageCache.m */; };
 		EDD033B120F1622E00BFBC3F /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD033A120F1622D00BFBC3F /* AFImageDownloader.m */; };
 		EDD033B320F1633D00BFBC3F /* PostItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDD033B220F1633D00BFBC3F /* PostItemTableCell.xib */; };
+		EDDBEC6C20FC504500EB3DEF /* AppUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDBEC6B20FC504500EB3DEF /* AppUIHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,8 @@
 		EDD033A020F1622D00BFBC3F /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		EDD033A120F1622D00BFBC3F /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
 		EDD033B220F1633D00BFBC3F /* PostItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostItemTableCell.xib; sourceTree = "<group>"; };
+		EDDBEC6A20FC504500EB3DEF /* AppUIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppUIHelper.h; sourceTree = "<group>"; };
+		EDDBEC6B20FC504500EB3DEF /* AppUIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppUIHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +271,8 @@
 			children = (
 				ED26165220F7E33C0063957E /* AppUtil.h */,
 				ED26165320F7E33C0063957E /* AppUtil.m */,
+				EDDBEC6A20FC504500EB3DEF /* AppUIHelper.h */,
+				EDDBEC6B20FC504500EB3DEF /* AppUIHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -756,6 +761,7 @@
 				ED285C4620FA89780070A63C /* UIApplication+UIID.m in Sources */,
 				EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */,
 				ED26165720F7E5AA0063957E /* CSNavigationViewController.m in Sources */,
+				EDDBEC6C20FC504500EB3DEF /* AppUIHelper.m in Sources */,
 				ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */,
 				ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */,
 				ED2BDAA420E4D6A100D7A8D7 /* PostListViewController.m in Sources */,

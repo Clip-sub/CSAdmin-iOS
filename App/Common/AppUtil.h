@@ -14,4 +14,6 @@
 + (UIColor *) getUIColorFromRGB: (NSString *) rgbColor;
 + (UIColor *) getUIColorFromRGB: (NSString *) rgbColor withAlpha:(CGFloat) alpha;
 
++ (NSString *) base64Encode: (NSString *) value;
+
 @end

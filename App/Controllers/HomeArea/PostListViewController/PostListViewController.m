@@ -31,7 +31,7 @@
     [self.activityIndicatorView startAnimating];
     
     // Fetch data
-    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=harry&country=us&entity=movie"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=doraemon&country=sg&entity=movie"];
     AFHTTPSessionManager *operation = [AFHTTPSessionManager manager];
     [operation GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // NSLog(@"JSON %@", responseObject);

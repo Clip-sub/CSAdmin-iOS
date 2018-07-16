@@ -13,15 +13,17 @@
         return [AppUIHelper getVisibleViewControllerFrom:[((UINavigationController *) vc) visibleViewController]];
     }
 
-    if ([vc isKindOfClass:[UITabBarController class]]) {
+    else if ([vc isKindOfClass:[UITabBarController class]]) {
         return [AppUIHelper getVisibleViewControllerFrom:[((UITabBarController *) vc) selectedViewController]];
     }
 
-    if (vc.presentedViewController) {
-        return nil;
+    else {
+        if (vc.presentedViewController) {
+            return [AppUIHelper getVisibleViewControllerFrom:vc.presentedViewController];
+        } else {
+            return vc;
+        }
     }
-
-    return nil;
 }
 
 + (void)showAlertViewWithTitle:(NSString *)title andMessage:(NSString *)message {

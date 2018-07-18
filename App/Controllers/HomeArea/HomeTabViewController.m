@@ -10,13 +10,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Post list VC:
+    PostListViewController *postListController = [[PostListViewController alloc] initWithNibName:NSStringFromClass(postListController.class) bundle:nil];
     
-    PostListViewController *postListController = [[PostListViewController alloc] init];
+    // Blank, placeholder VC:
+    UIViewController *blankController = [UIViewController new];
     
+    // Latest comments VC:
     LatestCommentsViewController *latestCommentsController = [[LatestCommentsViewController alloc] initWithNibName:NSStringFromClass(LatestCommentsViewController.class) bundle:nil];
     
-    [self setViewControllers:[NSArray arrayWithObjects:postListController, latestCommentsController, nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:postListController, blankController, latestCommentsController, nil]];
     
     // Initializing ViewController labels:
     [self initViewControllersLabel];
@@ -27,30 +30,14 @@
 }
 
 - (void) initViewControllersLabel {
-    NSArray *controllers = self.viewControllers;
-    
-    // [[controllers objectAtIndex:0] setTitle:@"Home"];
-    [[controllers objectAtIndex:1] setTitle:@"Comments"];
-    
     NSArray *tabBarItems = self.tabBar.items;
-    [[tabBarItems objectAtIndex:0] setImage:[UIImage imageNamed:@"Comment"]];
+    
+    UITabBarItem *leftItem = [tabBarItems objectAtIndex:0];
+    leftItem.title = @"Test";
 }
 
-- (void)customizeTabItems:(UITabBar *)tabBar {
-    UITabBar *tb = [self tabBar];
-    /* UITabBarItem *tabItem1 = [tb.items objectAtIndex:0];
-     UITabBarItem *tabItem2 = [tb.items objectAtIndex:1];
-     UITabBarItem *tabItem3 = [tb.items objectAtIndex:2];*/
+- (void)initializeTabBar {
+    //UITabBarItem *tabItem1 =
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED0136D820FD3A88002B64F6 /* HomeTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
 		ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72120F8AE2A009B4725 /* ApiClient+User.m */; };
 		ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */; };
@@ -16,7 +15,6 @@
 		ED285C4620FA89780070A63C /* UIApplication+UIID.m in Sources */ = {isa = PBXBuildFile; fileRef = ED285C4520FA89780070A63C /* UIApplication+UIID.m */; };
 		ED285C4A20FA8F880070A63C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED285C4920FA8F880070A63C /* Security.framework */; };
 		ED288AE420F3FC4B007339EF /* PostItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED288AE320F3FC4B007339EF /* PostItemTableCell.m */; };
-		ED2BDA9E20E4C8E900D7A8D7 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BDA9C20E4C8E900D7A8D7 /* HomeTabViewController.m */; };
 		ED2BDAA420E4D6A100D7A8D7 /* PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */; };
 		ED2BDAAA20E4E3B300D7A8D7 /* LatestCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2BDAA820E4E3B300D7A8D7 /* LatestCommentsViewController.m */; };
 		ED2BDAAB20E4E3B300D7A8D7 /* LatestCommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2BDAA920E4E3B300D7A8D7 /* LatestCommentsViewController.xib */; };
@@ -27,6 +25,8 @@
 		ED50F96D20E23CDE006EF430 /* Firis.png in Resources */ = {isa = PBXBuildFile; fileRef = ED50F96C20E23CDE006EF430 /* Firis.png */; };
 		ED50F97520E24BAD006EF430 /* PageItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50F97320E24BAD006EF430 /* PageItemController.m */; };
 		ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED50F97420E24BAD006EF430 /* PageItemController.xib */; };
+		ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53A23120FF20F00083E967 /* HomeTabViewController.m */; };
+		ED53A23420FF20F00083E967 /* HomeTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED53A23220FF20F00083E967 /* HomeTabViewController.xib */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
 		EDB0143620E20266006DED66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143520E20266006DED66 /* Assets.xcassets */; };
 		EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143720E20266006DED66 /* LaunchScreen.storyboard */; };
@@ -135,7 +135,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBar.xib; sourceTree = "<group>"; };
 		ED0BB1D420F883050069146C /* CS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS-Prefix.pch"; sourceTree = "<group>"; };
 		ED23B71D20F891CC009B4725 /* ApiClient+Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Post.h"; sourceTree = "<group>"; };
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
@@ -152,8 +151,6 @@
 		ED285C4920FA8F880070A63C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ED288AE220F3FC4B007339EF /* PostItemTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostItemTableCell.h; sourceTree = "<group>"; };
 		ED288AE320F3FC4B007339EF /* PostItemTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostItemTableCell.m; sourceTree = "<group>"; };
-		ED2BDA9B20E4C8E900D7A8D7 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
-		ED2BDA9C20E4C8E900D7A8D7 /* HomeTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
 		ED2BDAA120E4D6A100D7A8D7 /* PostListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListViewController.h; sourceTree = "<group>"; };
 		ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListViewController.m; sourceTree = "<group>"; };
 		ED2BDAA720E4E3B300D7A8D7 /* LatestCommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatestCommentsViewController.h; sourceTree = "<group>"; };
@@ -171,6 +168,9 @@
 		ED50F97220E24BAD006EF430 /* PageItemController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageItemController.h; sourceTree = "<group>"; };
 		ED50F97320E24BAD006EF430 /* PageItemController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageItemController.m; sourceTree = "<group>"; };
 		ED50F97420E24BAD006EF430 /* PageItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageItemController.xib; sourceTree = "<group>"; };
+		ED53A23020FF20F00083E967 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
+		ED53A23120FF20F00083E967 /* HomeTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
+		ED53A23220FF20F00083E967 /* HomeTabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabViewController.xib; sourceTree = "<group>"; };
 		EDB0142920E20263006DED66 /* CSAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB0142C20E20264006DED66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDB0142D20E20264006DED66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -310,9 +310,9 @@
 			children = (
 				ED2BDAA620E4E33F00D7A8D7 /* LatestCommentsViewController */,
 				ED2BDAA020E4CAC100D7A8D7 /* PostListViewController */,
-				ED0136D720FD3A88002B64F6 /* HomeTabBar.xib */,
-				ED2BDA9B20E4C8E900D7A8D7 /* HomeTabViewController.h */,
-				ED2BDA9C20E4C8E900D7A8D7 /* HomeTabViewController.m */,
+				ED53A23020FF20F00083E967 /* HomeTabViewController.h */,
+				ED53A23120FF20F00083E967 /* HomeTabViewController.m */,
+				ED53A23220FF20F00083E967 /* HomeTabViewController.xib */,
 			);
 			path = HomeArea;
 			sourceTree = "<group>";
@@ -728,7 +728,7 @@
 				ED4240E220F4708A0077D8C6 /* PostListViewController.xib in Resources */,
 				ED50F96D20E23CDE006EF430 /* Firis.png in Resources */,
 				EDD033B320F1633D00BFBC3F /* PostItemTableCell.xib in Resources */,
-				ED0136D820FD3A88002B64F6 /* HomeTabBar.xib in Resources */,
+				ED53A23420FF20F00083E967 /* HomeTabViewController.xib in Resources */,
 				ED3F3AD420F3F73D00EACBDC /* Placeholder.png in Resources */,
 				EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */,
 				ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */,
@@ -775,13 +775,13 @@
 				EDD033AD20F1622E00BFBC3F /* UIButton+AFNetworking.m in Sources */,
 				ED288AE420F3FC4B007339EF /* PostItemTableCell.m in Sources */,
 				EDD033A320F1622E00BFBC3F /* AFURLResponseSerialization.m in Sources */,
+				ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */,
 				EDD033AA20F1622E00BFBC3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				EDD033AB20F1622E00BFBC3F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EDD033AC20F1622E00BFBC3F /* UIImageView+AFNetworking.m in Sources */,
 				EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */,
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,
 				ED487CC220EA1DCF000D4FFB /* ResponseObject.m in Sources */,
-				ED2BDA9E20E4C8E900D7A8D7 /* HomeTabViewController.m in Sources */,
 				EDD033AF20F1622E00BFBC3F /* UIWebView+AFNetworking.m in Sources */,
 				ED2BDAAA20E4E3B300D7A8D7 /* LatestCommentsViewController.m in Sources */,
 				EDD033A720F1622E00BFBC3F /* AFNetworkReachabilityManager.m in Sources */,

@@ -29,9 +29,10 @@
     
     [self.view addSubview:self.activityIndicatorView];
     [self.activityIndicatorView startAnimating];
-    
+
     // Fetch data
-    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=doraemon&country=sg&entity=movie"];
+    // TODO: Remove
+    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=transformers&country=sg&entity=movie"];
     AFHTTPSessionManager *operation = [AFHTTPSessionManager manager];
     [operation GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         // NSLog(@"JSON %@", responseObject);
@@ -39,7 +40,7 @@
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSLog(@"This is a array!!");
         }
-        
+
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             NSLog(@"This is an object!! %@", [responseObject valueForKeyPath:@"resultCount"]);
             
@@ -76,15 +77,5 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

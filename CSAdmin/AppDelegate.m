@@ -12,7 +12,7 @@
     // [rootView]
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    HomeTabViewController *vc = [[HomeTabViewController alloc] init];
+    HomeTabViewController *vc = [[HomeTabViewController alloc] initWithNibName:NSStringFromClass(HomeTabViewController.class) bundle:nil];
     
     [self.window setRootViewController:vc];
     [self.window makeKeyAndVisible];

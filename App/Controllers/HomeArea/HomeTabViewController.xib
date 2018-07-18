@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeTabViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tabBarController id="mY7-nC-1M4" customClass="HomeTabViewController">
+            <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s1K-QS-C2m">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </tabBar>
+            <viewControllers>
+                <viewController id="Y7s-H8-mHs">
+                    <view key="view" contentMode="scaleToFill" id="9Wo-g2-as2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ODu-68-YjR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="GMt-ba-Vva"/>
+                </viewController>
+                <viewController id="kq3-90-P1B">
+                    <view key="view" contentMode="scaleToFill" id="CZn-5b-XVk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="las-YE-C6x"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="NYm-w5-GPL"/>
+                </viewController>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="PQD-Te-GeZ" userLabel="Item 3">
+                    <tabBarItem key="tabBarItem" title="Item" id="TqZ-WY-Ej3"/>
+                    <toolbarItems/>
+                </viewController>
+            </viewControllers>
+            <connections>
+                <outlet property="delegate" destination="-1" id="27H-W2-RcL"/>
+            </connections>
+            <point key="canvasLocation" x="-193" y="136"/>
+        </tabBarController>
+    </objects>
+</document>

@@ -35,19 +35,17 @@
     NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=transformers&country=sg&entity=movie"];
     AFHTTPSessionManager *operation = [AFHTTPSessionManager manager];
     [operation GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // NSLog(@"JSON %@", responseObject);
         
+        self.posts = [responseObject objectForKey:@"results"];
+        [self.activityIndicatorView stopAnimating];
+        [self.tableView setHidden:NO];
+        [self.tableView reloadData];
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSLog(@"This is a array!!");
         }
 
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             NSLog(@"This is an object!! %@", [responseObject valueForKeyPath:@"resultCount"]);
-            
-            self.posts = [responseObject objectForKey:@"results"];
-            [self.activityIndicatorView stopAnimating];
-            [self.tableView setHidden:NO];
-            [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Error %@", error);

@@ -38,6 +38,7 @@
 		ED50F97520E24BAD006EF430 /* PageItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50F97320E24BAD006EF430 /* PageItemController.m */; };
 		ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED50F97420E24BAD006EF430 /* PageItemController.xib */; };
 		ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53A23120FF20F00083E967 /* HomeTabViewController.m */; };
+		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
 		EDB0143620E20266006DED66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143520E20266006DED66 /* Assets.xcassets */; };
 		EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143720E20266006DED66 /* LaunchScreen.storyboard */; };
@@ -205,6 +206,8 @@
 		ED50F97420E24BAD006EF430 /* PageItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageItemController.xib; sourceTree = "<group>"; };
 		ED53A23020FF20F00083E967 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
 		ED53A23120FF20F00083E967 /* HomeTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
+		ED6E79232107B45D00BD549F /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		ED6E79242107B45D00BD549F /* Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		EDB0142920E20263006DED66 /* CSAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB0142C20E20264006DED66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDB0142D20E20264006DED66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -575,6 +578,8 @@
 				ED02868D21073F1C0056E485 /* Post.m */,
 				ED02868F2107403C0056E485 /* Comment.h */,
 				ED0286902107403C0056E485 /* Comment.m */,
+				ED6E79232107B45D00BD549F /* Category.h */,
+				ED6E79242107B45D00BD549F /* Category.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -881,6 +886,7 @@
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,
 				ED487CC220EA1DCF000D4FFB /* ResponseObject.m in Sources */,
 				EDD033AF20F1622E00BFBC3F /* UIWebView+AFNetworking.m in Sources */,
+				ED6E79252107B45D00BD549F /* Category.m in Sources */,
 				ED2BDAAA20E4E3B300D7A8D7 /* LatestCommentsViewController.m in Sources */,
 				ED02868921073EEC0056E485 /* JSONHTTPClient.m in Sources */,
 				EDD033A720F1622E00BFBC3F /* AFNetworkReachabilityManager.m in Sources */,

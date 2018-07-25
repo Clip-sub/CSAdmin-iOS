@@ -26,6 +26,9 @@
         if (error) {
             responseObject.data = nil;
             responseObject.message = [responseData objectForKey:@"message"];
+        } else {
+            responseObject.data = responseDict;
+            responseObject.message = [responseData objectForKey:@"message"];
         }
     }
 }

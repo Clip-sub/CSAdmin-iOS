@@ -1,9 +1,12 @@
 #import "ApiClient+Post.h"
+#import "Post.h"
 
 @implementation ApiClient (Post)
 
+// Array
 - (void)getLatestPosts:(NSNumber *)page success:(void (^)(ResponseObject *))onSuccess failure:(void (^)(ResponseObject *))onFailure {
     [self GET:kPathPosts parameters:@{ @"page": page } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
         
         [self onSuccess:responseObject success:onSuccess];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

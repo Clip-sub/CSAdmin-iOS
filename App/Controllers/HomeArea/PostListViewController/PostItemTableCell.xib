@@ -55,8 +55,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="Qku-BY-FK4">
+                        <rect key="frame" x="440" y="71.5" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="NZk-fk-YSJ"/>
+                            <constraint firstAttribute="height" constant="14" id="llt-X0-PJL"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Qku-BY-FK4" firstAttribute="baseline" secondItem="4fM-Hf-B3t" secondAttribute="baseline" id="09A-o2-Whd"/>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="top" secondItem="E1Q-f5-3tM" secondAttribute="top" id="1Gv-HV-aUz"/>
                     <constraint firstItem="4fM-Hf-B3t" firstAttribute="bottom" secondItem="E1Q-f5-3tM" secondAttribute="bottomMargin" id="1Mp-Aw-FUW"/>
                     <constraint firstAttribute="trailing" secondItem="Crv-xU-zrA" secondAttribute="trailing" constant="20" id="6tE-ja-WTl"/>
@@ -64,6 +72,7 @@
                     <constraint firstItem="0SY-gs-Ip0" firstAttribute="bottom" secondItem="E1Q-f5-3tM" secondAttribute="bottomMargin" id="EIR-Mf-BXY"/>
                     <constraint firstAttribute="bottom" secondItem="Ke5-ML-ztv" secondAttribute="bottom" id="FHw-cR-chk"/>
                     <constraint firstItem="0SY-gs-Ip0" firstAttribute="trailing" secondItem="E1Q-f5-3tM" secondAttribute="trailingMargin" id="Ghc-VR-qNk"/>
+                    <constraint firstItem="4fM-Hf-B3t" firstAttribute="leading" secondItem="Qku-BY-FK4" secondAttribute="trailing" constant="8" id="Niq-1c-JdQ"/>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="leading" secondItem="E1Q-f5-3tM" secondAttribute="leading" id="Phg-vB-dGL"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="leading" secondItem="Ke5-ML-ztv" secondAttribute="trailing" constant="20" id="ckg-G6-tsp"/>
                     <constraint firstItem="uWT-Nl-j5k" firstAttribute="top" secondItem="Crv-xU-zrA" secondAttribute="bottom" constant="8" symbolic="YES" id="lQd-X3-E86"/>
@@ -80,4 +89,7 @@
             <point key="canvasLocation" x="43" y="-86"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Person" width="307" height="307"/>
+    </resources>
 </document>

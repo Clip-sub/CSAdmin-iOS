@@ -37,6 +37,9 @@
     UITabBarItem *rightItem = [tabBarItems objectAtIndex:2];
 
     leftItem.title = @"Test";
+    leftItem.image = [UIImage imageNamed:@"Heart"];
+    leftItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    
 
     centerItem.image = [UIImage imageNamed:@"Plus"];
     centerItem.imageInsets = UIEdgeInsetsMake(-25, 0, 0, 0);

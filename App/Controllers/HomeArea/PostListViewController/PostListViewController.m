@@ -2,6 +2,7 @@
 #import "AFNetworking.h"
 #import "UIKit+AFNetworking.h"
 #import "PostItemTableCell.h"
+#import "ApiClient+Post.h"
 
 @interface PostListViewController ()
 
@@ -32,7 +33,18 @@
 
     // Fetch data
     // TODO: Remove
-    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=transformers&country=sg&entity=movie"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://itunes.apple.com/search?term=ant&country=sg&entity=movie"];
+    
+    
+    /* [[ApiClient sharedClient] getLatestPosts:@1 success:^(ResponseObject *responseObject) {
+        if ([responseObject.data isKindOfClass:[NSArray class]]) {
+            NSLog(@"AAA");
+        }
+        
+        NSLog(@"sadada");
+    } failure:^(ResponseObject *failureObject) {
+        NSLog(@"Fail");
+    }];*/
     AFHTTPSessionManager *operation = [AFHTTPSessionManager manager];
     [operation GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         

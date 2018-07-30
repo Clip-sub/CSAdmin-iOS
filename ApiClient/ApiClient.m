@@ -15,12 +15,13 @@
 - (void)onSuccess:(id)responseData success:(void (^)(id resp))successBlock {
     if (successBlock) {
         NSDictionary *responseDict;
+        NSArray *responseArray;
         if ([responseData isKindOfClass:[NSObject class]]) {
             // If response is object.
             responseDict = [responseData mutableCopy];
         } else {
             // If response is array.
-            responseDict = [responseData mutableCopy];
+            responseArray = [responseData mutableCopy];
         }
     }
 }

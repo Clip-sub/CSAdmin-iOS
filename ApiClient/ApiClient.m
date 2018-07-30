@@ -12,23 +12,15 @@
     return _sharedClient;
 }
 
-- (void)onSuccess:(id)responseData success:(void (^)(ResponseObject *))successBlock {
+- (void)onSuccess:(id)responseData success:(void (^)(id resp))successBlock {
     if (successBlock) {
-        NSError *error = nil;
         NSDictionary *responseDict;
-        if (responseData) {
+        if ([responseData isKindOfClass:[NSObject class]]) {
+            // If response is object.
             responseDict = [responseData mutableCopy];
         } else {
-            responseDict = nil;
-        }
-        
-        ResponseObject *responseObject = [[ResponseObject alloc] init];
-        if (error) {
-            responseObject.data = nil;
-            responseObject.message = [responseData objectForKey:@"message"];
-        } else {
-            responseObject.data = responseDict;
-            responseObject.message = [responseData objectForKey:@"message"];
+            // If response is array.
+            responseDict = [responseData mutableCopy];
         }
     }
 }

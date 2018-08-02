@@ -431,10 +431,10 @@
 		ED487BDA20EA03CB000D4FFB /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				ED23B72520F8C5BD009B4725 /* ApiAuthClient.h */,
-				ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */,
 				ED487C9620EA06F0000D4FFB /* ApiClient.h */,
 				ED487C9720EA06F0000D4FFB /* ApiClient.m */,
+				ED23B72520F8C5BD009B4725 /* ApiAuthClient.h */,
+				ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */,
 				ED23B71D20F891CC009B4725 /* ApiClient+Post.h */,
 				ED23B71E20F891CC009B4725 /* ApiClient+Post.m */,
 				ED23B72020F8AE2A009B4725 /* ApiClient+User.h */,

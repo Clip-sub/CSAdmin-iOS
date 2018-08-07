@@ -11,7 +11,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Post list VC:
-    PostListViewController *postListController = [[PostListViewController alloc] initWithNibName:NSStringFromClass(postListController.class) bundle:nil];
+    PostListViewController *postListController = [[PostListViewController alloc] initWithNibName:NSStringFromClass(PostListViewController.class) bundle:nil];
 
     // Blank, placeholder VC:
     UIViewController *blankController = [UIViewController new];
@@ -37,14 +37,15 @@
     UITabBarItem *rightItem = [tabBarItems objectAtIndex:2];
 
     leftItem.title = @"Test";
-    leftItem.image = [UIImage imageNamed:@"Heart"];
+    leftItem.image = [UIImage imageNamed:@"Home"];
     leftItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     
-
     centerItem.image = [UIImage imageNamed:@"Plus"];
     centerItem.imageInsets = UIEdgeInsetsMake(-25, 0, 0, 0);
     
     rightItem.title = @"Comments";
+    rightItem.image = [UIImage imageNamed:@"Comment"];
+    rightItem.imageInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 - (void)initializeTabBar {

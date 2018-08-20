@@ -18,6 +18,7 @@
 
 @interface FeaturedMedia : JSONModel
 @property (nonatomic) NSNumber *mediaID;
+@property (weak, nonatomic) NSString *sourceUrl;
 @end
 
 // Main Post model

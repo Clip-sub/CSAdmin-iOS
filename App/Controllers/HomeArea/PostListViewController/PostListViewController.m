@@ -6,6 +6,8 @@
 #import "ApiClient+Post.h"
 #import "Post.h"
 
+// #import "CSAdmin-Swift.h"
+
 @interface PostListViewController ()
 
 @end
@@ -18,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     // Initializing Data Source
     self.posts = [[NSArray alloc] init];
     // Setting up Table View
@@ -37,28 +40,20 @@
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
         // Code
         NSLog(@"%@", postArray);
-        
+
         self.posts = [Post arrayOfModelsFromDictionaries:postArray error:nil];
-    } failure:^(NSError *error) {
-        NSLog(@"%@", error);
-    }];
-    /*AFHTTPSessionManager *operation = [AFHTTPSessionManager manager];
-    [operation GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        self.posts = [responseObject objectForKey:@"results"];
         [self.activityIndicatorView stopAnimating];
         [self.tableView setHidden:NO];
         [self.tableView reloadData];
-        if ([responseObject isKindOfClass:[NSArray class]]) {
-            NSLog(@"This is a array!!");
-        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error);
+        [self.activityIndicatorView stopAnimating];
+    }];
+}
 
-        if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            NSLog(@"This is an object!! %@", [responseObject valueForKeyPath:@"resultCount"]);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"Error %@", error);
-    }];*/
+- (void)viewDidAppear:(BOOL)animated {
+
 }
 
 #pragma mark - Table view data source
@@ -75,8 +70,8 @@
     cell.postTitle.text = post.title.rendered;
     cell.postExcerpt.text = post.excerpt.rendered;
     
-    // NSURL *url = [[NSURL alloc] initWithString:[post objectForKey:@"artworkUrl100"]];
-    // [cell.thumbnailImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://media.discordapp.net/attachments/452300203144511491/481174613682815005/unknown.png?width=800&height=450"];
+    [cell.thumbnailImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];
     
     return cell;
 }

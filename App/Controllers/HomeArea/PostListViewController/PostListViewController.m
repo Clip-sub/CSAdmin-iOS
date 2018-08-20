@@ -38,9 +38,6 @@
 
     // Fetch data
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
-        // Code
-        NSLog(@"%@", postArray);
-
         self.posts = [Post arrayOfModelsFromDictionaries:postArray error:nil];
         
         [self.activityIndicatorView stopAnimating];
@@ -72,7 +69,7 @@
     
     NSURL *url = [[NSURL alloc] initWithString:@"https://media.discordapp.net/attachments/452300203144511491/481174613682815005/unknown.png?width=800&height=450"];
     [cell.thumbnailImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];
-    
+
     return cell;
 }
 

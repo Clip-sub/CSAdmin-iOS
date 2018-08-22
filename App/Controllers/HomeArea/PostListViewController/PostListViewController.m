@@ -39,7 +39,6 @@
     // Fetch data
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
         self.posts = [Post arrayOfModelsFromDictionaries:postArray error:nil];
-        
         [self.activityIndicatorView stopAnimating];
         [self.tableView setHidden:NO];
         [self.tableView reloadData];
@@ -47,10 +46,6 @@
         NSLog(@"%@", error);
         [self.activityIndicatorView stopAnimating];
     }];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-
 }
 
 #pragma mark - Table view data source
@@ -64,8 +59,8 @@
     PostItemTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostItemTableCell"];
     
     Post *post = [self.posts objectAtIndex:indexPath.row];
-    cell.postTitle.text = post.title.rendered;
-    cell.postExcerpt.text = post.excerpt.rendered;
+    //cell.postTitle.text = post.title.rendered;
+    //cell.postExcerpt.text = post.excerpt.rendered;
     
     NSURL *url = [[NSURL alloc] initWithString:@"https://media.discordapp.net/attachments/452300203144511491/481174613682815005/unknown.png?width=800&height=450"];
     [cell.thumbnailImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];

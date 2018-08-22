@@ -25,7 +25,7 @@
 @interface Post : JSONModel
 
 @property (nonatomic) NSDate *date;
-@property (nonatomic) NSString<Optional> *postID;
+@property (nonatomic) int postID;
 @property (nonatomic) NSString *link;
 @property (nonatomic) NSDate<Optional> *modified; // By adhering to the Optional protocol, the Post class knows that the JSON data won't always contain "modified" property.
 @property (nonatomic) NSString *status;

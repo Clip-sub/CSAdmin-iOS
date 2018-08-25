@@ -4,4 +4,6 @@
 
 - (void) changeStyle:(UIImage *) background;
 
+- (void) setNavTitle:(NSString *) title;
+
 @end

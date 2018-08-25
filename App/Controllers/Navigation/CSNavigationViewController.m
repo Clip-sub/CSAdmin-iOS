@@ -20,4 +20,10 @@
     [self.navigationBar setBackgroundImage:background forBarMetrics:UIBarMetricsDefault];
 }
 
+- (void)setNavTitle:(NSString *)title {
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = titleLabel;
+}
+
 @end

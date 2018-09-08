@@ -2,14 +2,17 @@
 #import "TutorialViewController.h"
 #import "HomeTabViewController.h"
 
+#import "CSNavigationViewController.h"
+
 @interface AppDelegate ()
+
+- (CSNavigationViewController *) initializeNavigationController;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // [rootView]
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     HomeTabViewController *vc = [HomeTabViewController new];
@@ -20,6 +23,12 @@
     return YES;
 }
 
+- (CSNavigationViewController *)initializeNavigationController {
+    CSNavigationViewController *mainNavController
+        = [[CSNavigationViewController alloc] initWithRootViewController:[HomeTabViewController new]];
+    
+    return mainNavController;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

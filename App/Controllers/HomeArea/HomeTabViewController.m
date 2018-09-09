@@ -1,6 +1,7 @@
 #import "HomeTabViewController.h"
 #import "PostListViewController/PostListViewController.h"
 #import "LatestCommentsViewController/LatestCommentsViewController.h"
+#import "TutorialViewController.h"
 
 @interface HomeTabViewController ()
 
@@ -22,7 +23,7 @@
     [self setViewControllers:[NSArray arrayWithObjects:postListController, blankController, latestCommentsController, nil]];
     
     // Initializing ViewController labels:
-    [self initViewControllersLabel];
+    [self initViewControllersLabel];    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,8 +14,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    HomeTabViewController *vc = [HomeTabViewController new];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    UIViewController *vc = [self initializeNavigationController];
 
     [self.window setRootViewController:vc];
     [self.window makeKeyAndVisible];

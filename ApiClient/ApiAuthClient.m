@@ -13,6 +13,10 @@
     return _sharedAuthClient;
 }
 
+- (void)onSuccess:(id)responseData success:(void (^)(ResponseObject *))successBlock {
+    // Code...
+}
+
 - (void)onError:(NSError *)error failure:(void (^)(ResponseObject *))errorBlock {
     if (errorBlock) {
         ResponseObject *responseObject = [[ResponseObject alloc] init];

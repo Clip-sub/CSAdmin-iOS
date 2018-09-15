@@ -23,7 +23,11 @@
     [self setViewControllers:[NSArray arrayWithObjects:postListController, blankController, latestCommentsController, nil]];
     
     // Initializing ViewController labels:
-    [self initViewControllersLabel];    
+    [self initViewControllersLabel];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.navigationController pushViewController:[PostListViewController new] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

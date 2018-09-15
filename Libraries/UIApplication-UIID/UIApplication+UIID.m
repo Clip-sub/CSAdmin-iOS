@@ -133,7 +133,7 @@ static NSString * const UIApplication_UIID_Key = @"uniqueInstallationIdentifier"
         
         OSStatus result = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
         if (result != noErr) {
-            NSLog(@"[ERROR] Couldn't add the Keychain Item. result = %ld query = %@", result, query);
+            NSLog(@"[ERROR] Couldn't add the Keychain Item. result = %d query = %@", (int)result, query);
             return nil;
         }
         
@@ -165,7 +165,7 @@ static NSString * const UIApplication_UIID_Key = @"uniqueInstallationIdentifier"
     } else if (result == errSecItemNotFound) {
         DEBUGLOG(@"[INFO}  Unique Installation Identifier is successfully reset.");
     } else {
-        DEBUGLOG(@"[ERROR] Coudn't delete the Keychain Item. result = %ld query = %@", result, query);
+        DEBUGLOG(@"[ERROR] Coudn't delete the Keychain Item. result = %d query = %@", (int)result, query);
     }
 #else
     // UIID may not be persistent

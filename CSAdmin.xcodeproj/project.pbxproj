@@ -39,6 +39,8 @@
 		ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED50F97420E24BAD006EF430 /* PageItemController.xib */; };
 		ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53A23120FF20F00083E967 /* HomeTabViewController.m */; };
 		ED565D04214D782C0016F053 /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED565D03214D782C0016F053 /* IGListKit.framework */; };
+		ED565D08214D87C30016F053 /* PostGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED565D07214D87C30016F053 /* PostGridViewController.m */; };
+		ED565D0C214D88790016F053 /* IGSpinnerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */; };
 		ED6A57E5212ADC2D004C22C3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */; };
 		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
@@ -209,6 +211,10 @@
 		ED53A23020FF20F00083E967 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
 		ED53A23120FF20F00083E967 /* HomeTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
 		ED565D03214D782C0016F053 /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
+		ED565D06214D87C30016F053 /* PostGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostGridViewController.h; sourceTree = "<group>"; };
+		ED565D07214D87C30016F053 /* PostGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostGridViewController.m; sourceTree = "<group>"; };
+		ED565D0A214D88790016F053 /* IGSpinnerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGSpinnerCollectionViewCell.h; sourceTree = "<group>"; };
+		ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGSpinnerCollectionViewCell.m; sourceTree = "<group>"; };
 		ED6A57E3212ADC2D004C22C3 /* CSAdmin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		ED6E79232107B45D00BD549F /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -353,6 +359,7 @@
 		ED0BB1D520F883780069146C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ED565D09214D88470016F053 /* Views */,
 				ED26164A20F7E31E0063957E /* Common */,
 				ED487CC420EA336F000D4FFB /* Config */,
 				ED50F96B20E23CCF006EF430 /* Assets */,
@@ -417,6 +424,8 @@
 		ED2BDAA020E4CAC100D7A8D7 /* PostListViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ED565D06214D87C30016F053 /* PostGridViewController.h */,
+				ED565D07214D87C30016F053 /* PostGridViewController.m */,
 				ED2BDAA120E4D6A100D7A8D7 /* PostListViewController.h */,
 				ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */,
 				ED4240E120F4708A0077D8C6 /* PostListViewController.xib */,
@@ -511,6 +520,15 @@
 				ED50F97420E24BAD006EF430 /* PageItemController.xib */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		ED565D09214D88470016F053 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED565D0A214D88790016F053 /* IGSpinnerCollectionViewCell.h */,
+				ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EDB0142020E20263006DED66 = {
@@ -887,6 +905,8 @@
 				EDB0143C20E20266006DED66 /* main.m in Sources */,
 				EDD033A820F1622E00BFBC3F /* AFSecurityPolicy.m in Sources */,
 				ED285C4620FA89780070A63C /* UIApplication+UIID.m in Sources */,
+				ED565D0C214D88790016F053 /* IGSpinnerCollectionViewCell.m in Sources */,
+				ED565D08214D87C30016F053 /* PostGridViewController.m in Sources */,
 				EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */,
 				ED0286912107403C0056E485 /* Comment.m in Sources */,
 				ED02868B21073EEC0056E485 /* JSONModel+networking.m in Sources */,

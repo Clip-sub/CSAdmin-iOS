@@ -38,6 +38,7 @@
 		ED50F97520E24BAD006EF430 /* PageItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50F97320E24BAD006EF430 /* PageItemController.m */; };
 		ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED50F97420E24BAD006EF430 /* PageItemController.xib */; };
 		ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED53A23120FF20F00083E967 /* HomeTabViewController.m */; };
+		ED565D04214D782C0016F053 /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED565D03214D782C0016F053 /* IGListKit.framework */; };
 		ED6A57E5212ADC2D004C22C3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */; };
 		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
@@ -207,6 +208,7 @@
 		ED50F97420E24BAD006EF430 /* PageItemController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageItemController.xib; sourceTree = "<group>"; };
 		ED53A23020FF20F00083E967 /* HomeTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTabViewController.h; sourceTree = "<group>"; };
 		ED53A23120FF20F00083E967 /* HomeTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTabViewController.m; sourceTree = "<group>"; };
+		ED565D03214D782C0016F053 /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
 		ED6A57E3212ADC2D004C22C3 /* CSAdmin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAdmin-Bridging-Header.h"; sourceTree = "<group>"; };
 		ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		ED6E79232107B45D00BD549F /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			files = (
 				ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */,
 				ED285C4A20FA8F880070A63C /* Security.framework in Frameworks */,
+				ED565D04214D782C0016F053 /* IGListKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +396,7 @@
 		ED285C4820FA8F880070A63C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED565D03214D782C0016F053 /* IGListKit.framework */,
 				ED028692210744BD0056E485 /* SystemConfiguration.framework */,
 				ED285C4920FA8F880070A63C /* Security.framework */,
 			);
@@ -672,6 +676,7 @@
 				EDB0142620E20263006DED66 /* Frameworks */,
 				EDB0142720E20263006DED66 /* Resources */,
 				ED487CA520EA1A2E000D4FFB /* Embed Frameworks */,
+				ED565D05214D78490016F053 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -853,6 +858,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED565D05214D78490016F053 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDB0142520E20263006DED66 /* Sources */ = {
@@ -1065,6 +1087,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CSAdmin/CS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SRCROOT}";
 				INFOPLIST_FILE = CSAdmin/Info.plist;
@@ -1087,6 +1113,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CSAdmin/CS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SRCROOT}";
 				INFOPLIST_FILE = CSAdmin/Info.plist;

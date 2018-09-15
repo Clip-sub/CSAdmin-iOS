@@ -1,7 +1,8 @@
 #import "JSONModel.h"
+#import <IGListKit/IGListKit.h>
 
 // Title sub-model
-@interface Title : JSONModel
+@interface Title : JSONModel <IGListDiffable>
 @property (nonatomic) NSString *rendered;
 @end
 

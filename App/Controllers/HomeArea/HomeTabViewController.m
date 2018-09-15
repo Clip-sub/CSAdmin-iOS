@@ -26,10 +26,6 @@
     [self initViewControllersLabel];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self.navigationController pushViewController:[PostListViewController new] animated:YES];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

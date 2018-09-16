@@ -80,7 +80,6 @@
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
         UICollectionViewLayout *layout = [UICollectionViewFlowLayout new];
-        
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }
     return _collectionView;
@@ -88,11 +87,13 @@
 
 - (NSMutableArray*) posts {
     if (!_posts || _posts.count <= 0) {
-        Post *p = [Post new];
-        p.title.rendered = @"Test";
-        
-        _posts = [NSMutableArray new];
-        [_posts addObject:p];
+        NSMutableArray *array = [NSMutableArray new];
+        for (int i = 1; i < 20; i++) {
+            Post *p = [Post new];
+            p.title.rendered = [@(i) stringValue];
+            [array addObject:p];
+        }
+        [self.posts addObjectsFromArray:array];
     }
     
     return _posts;

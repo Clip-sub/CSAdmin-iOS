@@ -43,6 +43,9 @@
 		ED565D0C214D88790016F053 /* IGSpinnerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */; };
 		ED6A57E5212ADC2D004C22C3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */; };
 		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
+		EDAF3D40214ED55200F944C5 /* PostListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */; };
+		EDAF3D44214EDF7B00F944C5 /* PostItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */; };
+		EDAF3D45214EDF7B00F944C5 /* PostItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
 		EDB0143620E20266006DED66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143520E20266006DED66 /* Assets.xcassets */; };
 		EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB0143720E20266006DED66 /* LaunchScreen.storyboard */; };
@@ -219,6 +222,11 @@
 		ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		ED6E79232107B45D00BD549F /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		ED6E79242107B45D00BD549F /* Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		EDAF3D3E214ED55200F944C5 /* PostListSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListSectionController.h; sourceTree = "<group>"; };
+		EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListSectionController.m; sourceTree = "<group>"; };
+		EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostItemCollectionViewCell.h; sourceTree = "<group>"; };
+		EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostItemCollectionViewCell.m; sourceTree = "<group>"; };
+		EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		EDB0142920E20263006DED66 /* CSAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB0142C20E20264006DED66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EDB0142D20E20264006DED66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -424,8 +432,7 @@
 		ED2BDAA020E4CAC100D7A8D7 /* PostListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				ED565D06214D87C30016F053 /* PostGridViewController.h */,
-				ED565D07214D87C30016F053 /* PostGridViewController.m */,
+				EDAF3D36214ED47700F944C5 /* Grid */,
 				ED2BDAA120E4D6A100D7A8D7 /* PostListViewController.h */,
 				ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */,
 				ED4240E120F4708A0077D8C6 /* PostListViewController.xib */,
@@ -529,6 +536,20 @@
 				ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EDAF3D36214ED47700F944C5 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				ED565D06214D87C30016F053 /* PostGridViewController.h */,
+				ED565D07214D87C30016F053 /* PostGridViewController.m */,
+				EDAF3D3E214ED55200F944C5 /* PostListSectionController.h */,
+				EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */,
+				EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */,
+				EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */,
+				EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */,
+			);
+			path = Grid;
 			sourceTree = "<group>";
 		};
 		EDB0142020E20263006DED66 = {
@@ -854,6 +875,7 @@
 				EDD033B320F1633D00BFBC3F /* PostItemTableCell.xib in Resources */,
 				ED3F3AD420F3F73D00EACBDC /* Placeholder.png in Resources */,
 				EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */,
+				EDAF3D45214EDF7B00F944C5 /* PostItemCollectionViewCell.xib in Resources */,
 				ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */,
 				ED02868821073EEC0056E485 /* Info.plist in Resources */,
 				EDB0143620E20266006DED66 /* Assets.xcassets in Resources */,
@@ -911,6 +933,7 @@
 				ED0286912107403C0056E485 /* Comment.m in Sources */,
 				ED02868B21073EEC0056E485 /* JSONModel+networking.m in Sources */,
 				ED26165720F7E5AA0063957E /* CSNavigationViewController.m in Sources */,
+				EDAF3D40214ED55200F944C5 /* PostListSectionController.m in Sources */,
 				EDDBEC6C20FC504500EB3DEF /* AppUIHelper.m in Sources */,
 				ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */,
 				ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */,
@@ -933,6 +956,7 @@
 				EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */,
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,
 				ED487CC220EA1DCF000D4FFB /* ResponseObject.m in Sources */,
+				EDAF3D44214EDF7B00F944C5 /* PostItemCollectionViewCell.m in Sources */,
 				EDD033AF20F1622E00BFBC3F /* UIWebView+AFNetworking.m in Sources */,
 				ED6E79252107B45D00BD549F /* Category.m in Sources */,
 				ED2BDAAA20E4E3B300D7A8D7 /* LatestCommentsViewController.m in Sources */,

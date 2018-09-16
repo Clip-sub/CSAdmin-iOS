@@ -61,6 +61,7 @@
                     p.title.rendered = [@(i) stringValue];
                     [array addObject:p];
                 }
+                [self.posts addObjectsFromArray:array];
             });
         });
     }
@@ -79,7 +80,7 @@
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
         UICollectionViewLayout *layout = [UICollectionViewFlowLayout new];
-
+        
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }
     return _collectionView;

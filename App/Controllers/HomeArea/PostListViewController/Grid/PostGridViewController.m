@@ -90,7 +90,7 @@
         NSMutableArray *array = [NSMutableArray new];
         for (int i = 1; i < 20; i++) {
             Post *p = [Post new];
-            p.title.rendered = [@(i) stringValue];
+            // p.title.rendered = [@(i) stringValue];
             [array addObject:p];
         }
         [self.posts addObjectsFromArray:array];

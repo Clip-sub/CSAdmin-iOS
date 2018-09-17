@@ -14,12 +14,12 @@
 
 @implementation Post
 
-+ (JSONKeyMapper *) keyMapper {
+/* + (JSONKeyMapper *) keyMapper {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
               @"postID": @"id"
             }];
-}
+} */
 
 - (nonnull id<NSObject>) diffIdentifier {
     return self;

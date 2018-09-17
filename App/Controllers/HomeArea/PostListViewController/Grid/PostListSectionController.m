@@ -7,6 +7,7 @@
 //
 
 #import "PostListSectionController.h"
+#import "PostItemCollectionViewCell.h"
 
 @implementation PostListSectionController
 
@@ -15,7 +16,20 @@
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
-    return CGSizeMake(self.collectionContext.containerSize.width, 55);
+    return CGSizeMake(floor(self.collectionContext.containerSize.width), 55);
+}
+
+- (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
+    PostItemCollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+    return cell;
+}
+
+- (void)didUpdateToObject:(id)object {
+    self.post = object;
+}
+
+- (void)didSelectItemAtIndex:(NSInteger)index {
+    // Code...
 }
 
 @end

@@ -20,6 +20,7 @@
 		ED0286912107403C0056E485 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0286902107403C0056E485 /* Comment.m */; };
 		ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED028692210744BD0056E485 /* SystemConfiguration.framework */; };
 		ED1E186E21502FFD00790D8C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; };
+		ED1E18702150393D00790D8C /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
 		ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72120F8AE2A009B4725 /* ApiClient+User.m */; };
 		ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */; };
@@ -148,6 +149,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				ED1E18702150393D00790D8C /* SDWebImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;

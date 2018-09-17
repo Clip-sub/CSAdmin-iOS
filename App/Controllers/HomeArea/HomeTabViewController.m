@@ -3,6 +3,8 @@
 #import "LatestCommentsViewController/LatestCommentsViewController.h"
 #import "TutorialViewController.h"
 
+#import "PostGridViewController.h"
+
 @interface HomeTabViewController ()
 
 @end
@@ -12,7 +14,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Post list VC:
-    PostListViewController *postListController = [[PostListViewController alloc] initWithNibName:NSStringFromClass(PostListViewController.class) bundle:nil];
+    /* PostListViewController *postListController = [[PostListViewController alloc] initWithNibName:NSStringFromClass(PostListViewController.class) bundle:nil]; */
+    
+    // Post grid:
+    PostGridViewController *postGrid = [PostGridViewController new];
 
     // Blank, placeholder VC:
     UIViewController *blankController = [UIViewController new];
@@ -20,7 +25,7 @@
     // Latest comments VC:
     LatestCommentsViewController *latestCommentsController = [[LatestCommentsViewController alloc] initWithNibName:NSStringFromClass(LatestCommentsViewController.class) bundle:nil];
     
-    [self setViewControllers:[NSArray arrayWithObjects:postListController, blankController, latestCommentsController, nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:postGrid, blankController, latestCommentsController, nil]];
     
     // Initializing ViewController labels:
     [self initViewControllersLabel];

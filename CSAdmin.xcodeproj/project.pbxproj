@@ -19,6 +19,7 @@
 		ED02868E21073F1C0056E485 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02868D21073F1C0056E485 /* Post.m */; };
 		ED0286912107403C0056E485 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0286902107403C0056E485 /* Comment.m */; };
 		ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED028692210744BD0056E485 /* SystemConfiguration.framework */; };
+		ED1E186E21502FFD00790D8C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
 		ED23B72220F8AE2A009B4725 /* ApiClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72120F8AE2A009B4725 /* ApiClient+User.m */; };
 		ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B72620F8C5BD009B4725 /* ApiAuthClient.m */; };
@@ -179,6 +180,7 @@
 		ED0286902107403C0056E485 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		ED028692210744BD0056E485 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED0BB1D420F883050069146C /* CS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS-Prefix.pch"; sourceTree = "<group>"; };
+		ED1E186D21502FFD00790D8C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		ED23B71D20F891CC009B4725 /* ApiClient+Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Post.h"; sourceTree = "<group>"; };
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
 		ED23B72020F8AE2A009B4725 /* ApiClient+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+User.h"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */,
 				ED285C4A20FA8F880070A63C /* Security.framework in Frameworks */,
 				ED565D04214D782C0016F053 /* IGListKit.framework in Frameworks */,
+				ED1E186E21502FFD00790D8C /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +414,7 @@
 		ED285C4820FA8F880070A63C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED1E186D21502FFD00790D8C /* SDWebImage.framework */,
 				ED565D03214D782C0016F053 /* IGListKit.framework */,
 				ED028692210744BD0056E485 /* SystemConfiguration.framework */,
 				ED285C4920FA8F880070A63C /* Security.framework */,
@@ -1121,6 +1125,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

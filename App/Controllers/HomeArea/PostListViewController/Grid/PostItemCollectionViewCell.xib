@@ -13,14 +13,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostItem" id="gTV-IL-0wX" customClass="PostItemCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PostItemCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="180" height="261"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="180" height="261"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71x-ch-HX3">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Firis.png" translatesAutoresizingMaskIntoConstraints="NO" id="71x-ch-HX3">
                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="71x-ch-HX3" secondAttribute="height" multiplier="1:1" id="m7P-mA-3Cc"/>
@@ -34,6 +34,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="71x-ch-HX3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AI2-VN-P6w"/>
                 <constraint firstAttribute="trailing" secondItem="71x-ch-HX3" secondAttribute="trailing" id="BPb-v9-xye"/>
@@ -49,4 +50,7 @@
             <point key="canvasLocation" x="97" y="224.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Firis.png" width="640" height="640"/>
+    </resources>
 </document>

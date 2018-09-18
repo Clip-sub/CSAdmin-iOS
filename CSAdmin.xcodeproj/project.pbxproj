@@ -19,6 +19,7 @@
 		ED02868E21073F1C0056E485 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02868D21073F1C0056E485 /* Post.m */; };
 		ED0286912107403C0056E485 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0286902107403C0056E485 /* Comment.m */; };
 		ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED028692210744BD0056E485 /* SystemConfiguration.framework */; };
+		ED0C82782151806000D1AC2A /* IGSpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0C82772151806000D1AC2A /* IGSpinnerCell.m */; };
 		ED1E186E21502FFD00790D8C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; };
 		ED1E18702150393D00790D8C /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
@@ -182,6 +183,8 @@
 		ED0286902107403C0056E485 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		ED028692210744BD0056E485 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED0BB1D420F883050069146C /* CS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS-Prefix.pch"; sourceTree = "<group>"; };
+		ED0C82762151806000D1AC2A /* IGSpinnerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGSpinnerCell.h; sourceTree = "<group>"; };
+		ED0C82772151806000D1AC2A /* IGSpinnerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGSpinnerCell.m; sourceTree = "<group>"; };
 		ED1E186D21502FFD00790D8C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		ED23B71D20F891CC009B4725 /* ApiClient+Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Post.h"; sourceTree = "<group>"; };
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
@@ -554,6 +557,8 @@
 				EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */,
 				EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */,
 				EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */,
+				ED0C82762151806000D1AC2A /* IGSpinnerCell.h */,
+				ED0C82772151806000D1AC2A /* IGSpinnerCell.m */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -958,6 +963,7 @@
 				ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */,
 				EDD033AA20F1622E00BFBC3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				EDD033AB20F1622E00BFBC3F /* AFNetworkActivityIndicatorManager.m in Sources */,
+				ED0C82782151806000D1AC2A /* IGSpinnerCell.m in Sources */,
 				EDD033AC20F1622E00BFBC3F /* UIImageView+AFNetworking.m in Sources */,
 				EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */,
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,

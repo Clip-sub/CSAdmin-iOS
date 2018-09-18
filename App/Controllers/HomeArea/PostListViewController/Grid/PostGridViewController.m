@@ -1,6 +1,8 @@
 #import "PostGridViewController.h"
 #import <IGListKit/IGListKit.h>
 #import "Post.h"
+#import "IGSpinnerCell.h"
+#import "PostListSectionController.h"
 
 @interface PostGridViewController () <IGListAdapterDataSource, UIScrollViewDelegate>
 
@@ -16,11 +18,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _posts = [NSMutableArray array];
+    for (int i = 1; i < 20; i++) {
+        Post *p = [Post new];
+        p.status = @"Status";
+        p.author = @12;
+        // p.title.rendered = @"ho";
+        p.link = @"Test";
+        p.date = [NSDate date];
+        // p.title.rendered = [@(i) stringValue];
+        [_posts addObject:p];
+    }
+
+    NSLog(@"Size is: %zd", [_posts count]);
     [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.collectionView.frame = self.view.bounds;
+    self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void) setupUI {
@@ -32,7 +54,7 @@
 }
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
-    NSMutableArray *items = [self.posts mutableCopy];
+    NSMutableArray *items = [_posts mutableCopy];
     if (self.isLoading) {
         [items addObject:self.spinObject];
     }
@@ -40,6 +62,22 @@
 }
 
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
+//    if ([object isEqualToString:self.spinObject]) {
+//        // If the loading indicator is visible:
+//        IGListSingleSectionCellConfigureBlock configureBlock = ^(id item, UICollectionViewCell *cell) {};
+//        IGListSingleSectionCellSizeBlock sizeBlock = ^CGSize(id item, id<IGListCollectionContext> context) {
+//            return CGSizeMake(context.containerSize.width, 150);
+//        };
+//
+//        return [[IGListSingleSectionController alloc] initWithCellClass:[IGSpinnerCell class] configureBlock:configureBlock sizeBlock:sizeBlock];
+//    } else {
+//        return [PostListSectionController new];
+//    }
+    
+    return [PostListSectionController new];
+}
+
+- (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
     return nil;
 }
 
@@ -58,7 +96,12 @@
                 NSMutableArray *array = [NSMutableArray new];
                 for (int i = 1; i < 20; i++) {
                     Post *p = [Post new];
-                    p.title.rendered = [@(i) stringValue];
+                    p.status = @"Status";
+                    p.author = @12;
+                    // p.title.rendered = @"ho";
+                    p.link = @"Test";
+                    p.date = [NSDate date];
+                    // p.title.rendered = [@(i) stringValue];
                     [array addObject:p];
                 }
                 [self.posts addObjectsFromArray:array];
@@ -79,24 +122,10 @@
 
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
-        UICollectionViewLayout *layout = [UICollectionViewFlowLayout new];
+        UICollectionViewLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }
     return _collectionView;
-}
-
-- (NSMutableArray*) posts {
-    if (!_posts || _posts.count <= 0) {
-        NSMutableArray *array = [NSMutableArray array];
-        for (int i = 1; i < 20; i++) {
-            Post *p = [Post new];
-            // p.title.rendered = [@(i) stringValue];
-            [array addObject:p];
-        }
-        [self.posts addObjectsFromArray:array];
-    }
-    
-    return _posts;
 }
 
 - (NSString *) spinObject {

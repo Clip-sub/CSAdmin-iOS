@@ -87,7 +87,7 @@
 
 - (NSMutableArray*) posts {
     if (!_posts || _posts.count <= 0) {
-        NSMutableArray *array = [NSMutableArray new];
+        NSMutableArray *array = [NSMutableArray array];
         for (int i = 1; i < 20; i++) {
             Post *p = [Post new];
             // p.title.rendered = [@(i) stringValue];

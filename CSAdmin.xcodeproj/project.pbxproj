@@ -1145,6 +1145,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CSAdmin/CS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SRCROOT}";
 				INFOPLIST_FILE = CSAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1171,6 +1172,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CSAdmin/CS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SRCROOT}";
 				INFOPLIST_FILE = CSAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

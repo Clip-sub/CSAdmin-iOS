@@ -12,18 +12,6 @@
 
 @end
 
-@implementation Embedded
-
-+ (JSONKeyMapper *)keyMapper
-{
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
-            @{
-              @"featuredMedia": @"wp:wpfeaturedmedia"
-              }];
-}
-
-@end
-
 @implementation Post
 
 + (JSONKeyMapper *)keyMapper
@@ -31,7 +19,7 @@
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
             @"postID": @"id",
-            @"embedded": @"_embedded"
+            @"title": @"title.rendered"
     }];
 }
 

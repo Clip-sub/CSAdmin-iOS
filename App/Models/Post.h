@@ -1,15 +1,9 @@
 #import "JSONModel.h"
 #import <IGListKit/IGListKit.h>
 
-@class Title;
 @class Excerpt;
 @class Content;
 @class FeaturedMedia;
-
-// Title sub-model
-@interface Title : JSONModel <IGListDiffable>
-@property (nonatomic) NSString *rendered;
-@end
 
 // Excerpt sub-model
 @interface Excerpt : JSONModel
@@ -27,11 +21,6 @@
 @property (weak, nonatomic) NSString *sourceUrl;
 @end
 
-// _embedded model.
-@interface Embedded : JSONModel
-@property (weak, nonatomic) FeaturedMedia<Optional> *featuredMedia;
-@end
-
 // Main Post model
 @interface Post : JSONModel
 
@@ -40,8 +29,10 @@
 @property (nonatomic) NSString *link;
 @property (nonatomic) NSDate<Optional> *modified;
 @property (nonatomic) NSString *status;
+@property (nonatomic) NSString *title;
+// @property (weak, nonatomic) NSString *thumbnailUrl;
 
-@property (nonatomic) Embedded *embedded;
+@property (weak, nonatomic) FeaturedMedia<Optional> *featuredMedia;
 // @property (nonatomic) Title *title;
 //@property (nonatomic) Excerpt *excerpt;
 //@property (nonatomic) Content *content;

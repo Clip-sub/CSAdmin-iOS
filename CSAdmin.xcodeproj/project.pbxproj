@@ -440,12 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				EDAF3D36214ED47700F944C5 /* Grid */,
-				ED2BDAA120E4D6A100D7A8D7 /* PostListViewController.h */,
-				ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */,
-				ED4240E120F4708A0077D8C6 /* PostListViewController.xib */,
-				EDD033B220F1633D00BFBC3F /* PostItemTableCell.xib */,
-				ED288AE220F3FC4B007339EF /* PostItemTableCell.h */,
-				ED288AE320F3FC4B007339EF /* PostItemTableCell.m */,
+				ED89DF03215E829400D44354 /* Linear */,
 			);
 			path = PostListViewController;
 			sourceTree = "<group>";
@@ -543,6 +538,19 @@
 				ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ED89DF03215E829400D44354 /* Linear */ = {
+			isa = PBXGroup;
+			children = (
+				ED2BDAA120E4D6A100D7A8D7 /* PostListViewController.h */,
+				ED2BDAA220E4D6A100D7A8D7 /* PostListViewController.m */,
+				ED4240E120F4708A0077D8C6 /* PostListViewController.xib */,
+				EDD033B220F1633D00BFBC3F /* PostItemTableCell.xib */,
+				ED288AE220F3FC4B007339EF /* PostItemTableCell.h */,
+				ED288AE320F3FC4B007339EF /* PostItemTableCell.m */,
+			);
+			path = Linear;
 			sourceTree = "<group>";
 		};
 		EDAF3D36214ED47700F944C5 /* Grid */ = {

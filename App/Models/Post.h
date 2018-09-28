@@ -27,6 +27,11 @@
 @property (weak, nonatomic) NSString *sourceUrl;
 @end
 
+// _embedded model.
+@interface Embedded : JSONModel
+@property (weak, nonatomic) FeaturedMedia<Optional> *featuredMedia;
+@end
+
 // Main Post model
 @interface Post : JSONModel
 
@@ -35,7 +40,8 @@
 @property (nonatomic) NSString *link;
 @property (nonatomic) NSDate<Optional> *modified;
 @property (nonatomic) NSString *status;
-@property (weak, nonatomic) FeaturedMedia<Optional> *featuredMedia;
+
+@property (nonatomic) Embedded *embedded;
 // @property (nonatomic) Title *title;
 //@property (nonatomic) Excerpt *excerpt;
 //@property (nonatomic) Content *content;

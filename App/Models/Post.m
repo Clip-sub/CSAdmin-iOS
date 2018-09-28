@@ -1,6 +1,29 @@
 #import "Post.h"
 #import "JSONKeyMapper.h"
 
+@implementation FeaturedMedia
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
+            @{
+              @"sourceUrl": @"source_url"
+              }];
+}
+
+@end
+
+@implementation Embedded
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
+            @{
+              @"featuredMedia": @"wp:wpfeaturedmedia"
+              }];
+}
+
+@end
+
 @implementation Post
 
 + (JSONKeyMapper *)keyMapper
@@ -8,7 +31,7 @@
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
             @"postID": @"id",
-            @"featuredMedia": @"wp:featuredmedia"
+            @"embedded": @"_embedded"
     }];
 }
 
@@ -23,15 +46,3 @@
 }
 
 @end
-
-@implementation FeaturedMedia
-+ (JSONKeyMapper *)keyMapper
-{
-    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
-            @{
-              @"sourceUrl": @"source_url"
-              }];
-}
-
-@end
-

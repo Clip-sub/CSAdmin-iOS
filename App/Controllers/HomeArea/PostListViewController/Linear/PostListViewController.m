@@ -12,13 +12,14 @@
 
 @end
 
-@implementation PostListViewController {
-    
+@implementation PostListViewController
+{
 }
 
 @synthesize activityIndicatorView = _activityIndicatorView, posts = _posts;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     // Initializing Data Source
@@ -27,12 +28,12 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"PostItemTableCell" bundle:nil] forCellReuseIdentifier:@"PostItemTableCell"];
-    
+
     // Setting up Activity Indicator View
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.activityIndicatorView.hidesWhenStopped = YES;
     self.activityIndicatorView.center = self.view.center;
-    
+
     [self.view addSubview:self.activityIndicatorView];
     [self.activityIndicatorView startAnimating];
 
@@ -50,25 +51,27 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.posts.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     PostItemTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostItemTableCell"];
-    
+
     Post *post = [self.posts objectAtIndex:indexPath.row];
     //cell.postTitle.text = post.title.rendered;
     //cell.postExcerpt.text = post.excerpt.rendered;
-    
+
     NSURL *url = [[NSURL alloc] initWithString:@"https://media.discordapp.net/attachments/452300203144511491/481174613682815005/unknown.png?width=800&height=450"];
     [cell.thumbnailImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"Placeholder"]];
 
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return UITableViewAutomaticDimension;
 }
 

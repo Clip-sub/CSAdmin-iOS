@@ -14,7 +14,7 @@
 
 // Get latest posts.
 - (void)getLatestPosts:(NSNumber *)page perPage:(NSNumber *)perPage success:(void (^)(NSArray *))onSuccess failure:(void (^)(NSError *))onFailure {
-    [self GET:kPathPosts parameters:@{ @"page": page, @"per_page": perPage } headers: nil
+    [self GET:kPathPosts parameters:@{ @"page": page, @"per_page": perPage, @"_embed": @"1" } headers: nil
      progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         onSuccess(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

@@ -38,7 +38,7 @@
     [self.activityIndicatorView startAnimating];
 
     // Fetch data
-    [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
+    [[ApiClient sharedClient] getLatestPosts:@1 perPage:@3 success:^(NSArray *postArray) {
         self.posts = [Post arrayOfModelsFromDictionaries:postArray error:nil];
         [self.activityIndicatorView stopAnimating];
         [self.tableView setHidden:NO];

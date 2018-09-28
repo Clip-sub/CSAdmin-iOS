@@ -12,7 +12,6 @@
 		ED02868521073EEC0056E485 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02866C21073EEC0056E485 /* JSONModel.m */; };
 		ED02868621073EEC0056E485 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02866D21073EEC0056E485 /* JSONModelError.m */; };
 		ED02868721073EEC0056E485 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02867021073EEC0056E485 /* JSONModelClassProperty.m */; };
-		ED02868821073EEC0056E485 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED02867321073EEC0056E485 /* Info.plist */; };
 		ED02868921073EEC0056E485 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02867621073EEC0056E485 /* JSONHTTPClient.m */; };
 		ED02868A21073EEC0056E485 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02867721073EEC0056E485 /* JSONAPI.m */; };
 		ED02868B21073EEC0056E485 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02867B21073EEC0056E485 /* JSONModel+networking.m */; };
@@ -57,7 +56,6 @@
 		EDB0145120E20266006DED66 /* CSAdminUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0145020E20266006DED66 /* CSAdminUITests.m */; };
 		EDB0146320E202B4006DED66 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0146120E202B4006DED66 /* TutorialViewController.m */; };
 		EDB0146420E202B4006DED66 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB0146220E202B4006DED66 /* TutorialViewController.xib */; };
-		EDD033A220F1622E00BFBC3F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD0337D20F1622D00BFBC3F /* Info.plist */; };
 		EDD033A320F1622E00BFBC3F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338320F1622D00BFBC3F /* AFURLResponseSerialization.m */; };
 		EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338420F1622D00BFBC3F /* AFHTTPSessionManager.m */; };
 		EDD033A520F1622E00BFBC3F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338620F1622D00BFBC3F /* AFURLSessionManager.m */; };
@@ -879,7 +877,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDD033A220F1622E00BFBC3F /* Info.plist in Resources */,
 				EDB0146420E202B4006DED66 /* TutorialViewController.xib in Resources */,
 				ED4240E220F4708A0077D8C6 /* PostListViewController.xib in Resources */,
 				ED50F96D20E23CDE006EF430 /* Firis.png in Resources */,
@@ -888,7 +885,6 @@
 				EDB0143920E20266006DED66 /* LaunchScreen.storyboard in Resources */,
 				EDAF3D45214EDF7B00F944C5 /* PostItemCollectionViewCell.xib in Resources */,
 				ED50F97620E24BAD006EF430 /* PageItemController.xib in Resources */,
-				ED02868821073EEC0056E485 /* Info.plist in Resources */,
 				EDB0143620E20266006DED66 /* Assets.xcassets in Resources */,
 				ED2BDAAB20E4E3B300D7A8D7 /* LatestCommentsViewController.xib in Resources */,
 			);

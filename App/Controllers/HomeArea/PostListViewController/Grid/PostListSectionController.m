@@ -12,7 +12,7 @@
 @implementation PostListSectionController
 
 - (NSInteger)numberOfItems {
-    return 1; // One item per array item.
+    return 4; // One item per array item.
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
@@ -20,7 +20,8 @@
 }
 
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
-    PostItemCollectionViewCell *cell = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+    PostItemCollectionViewCell *cell
+        = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
     return cell;
 }
 

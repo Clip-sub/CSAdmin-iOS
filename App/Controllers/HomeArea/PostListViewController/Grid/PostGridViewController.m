@@ -89,7 +89,7 @@
         self.loading = YES;
         [self.adapter performUpdatesAnimated:YES completion:nil];
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             sleep(2); // Sleep for 2 seconds.
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.loading = NO;
@@ -106,7 +106,7 @@
                 }
                 [self.posts addObjectsFromArray:array];
             });
-        });
+        });*/
     }
 }
 

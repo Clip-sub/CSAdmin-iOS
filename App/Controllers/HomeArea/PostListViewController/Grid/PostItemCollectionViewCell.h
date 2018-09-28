@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIImageView+AFNetworking.h"
 
 @interface PostItemCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *postTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 
 @end

@@ -12,16 +12,19 @@
 @implementation PostListSectionController
 
 - (NSInteger)numberOfItems {
-    return 4; // One item per array item.
+    return 3; // One item per array item.
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
-    return CGSizeMake(floor(self.collectionContext.containerSize.width / 3), 55);
+    CGFloat width = self.collectionContext.containerSize.width ?: 0;
+    CGFloat itemSize = floor(width / 3);
+    return CGSizeMake(itemSize, itemSize * 1.5);
 }
 
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
     PostItemCollectionViewCell *cell
         = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+    cell.postTitle.text = @"Yolo";
     return cell;
 }
 

@@ -25,28 +25,39 @@
                             <constraint firstAttribute="width" secondItem="71x-ch-HX3" secondAttribute="height" multiplier="1:1" id="m7P-mA-3Cc"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51q-D6-sqt">
-                        <rect key="frame" x="20" y="195" width="140" height="46"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51q-D6-sqt">
+                        <rect key="frame" x="20" y="195" width="140" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb6-cI-YTl">
+                        <rect key="frame" x="20" y="220" width="140" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="71x-ch-HX3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AI2-VN-P6w"/>
                 <constraint firstAttribute="trailing" secondItem="71x-ch-HX3" secondAttribute="trailing" id="BPb-v9-xye"/>
                 <constraint firstItem="71x-ch-HX3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YuT-JW-fC0"/>
                 <constraint firstAttribute="trailing" secondItem="51q-D6-sqt" secondAttribute="trailing" constant="20" id="avI-Kt-Ctt"/>
                 <constraint firstItem="71x-ch-HX3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dOC-7h-VRO"/>
-                <constraint firstAttribute="bottom" secondItem="51q-D6-sqt" secondAttribute="bottom" constant="20" id="kbU-t7-Zea"/>
+                <constraint firstAttribute="bottom" secondItem="51q-D6-sqt" secondAttribute="bottom" constant="36" id="kbU-t7-Zea"/>
                 <constraint firstItem="51q-D6-sqt" firstAttribute="top" secondItem="71x-ch-HX3" secondAttribute="bottom" constant="15" id="pXn-DR-q6e"/>
                 <constraint firstItem="51q-D6-sqt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="qc1-Nn-mVa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="180" height="261"/>
-            <point key="canvasLocation" x="97" y="224.5"/>
+            <connections>
+                <outlet property="postTitle" destination="51q-D6-sqt" id="4ev-c8-BVh"/>
+                <outlet property="thumbnail" destination="71x-ch-HX3" id="UQI-UW-VJ4"/>
+            </connections>
+            <point key="canvasLocation" x="96" y="224.4377811094453"/>
         </collectionViewCell>
     </objects>
     <resources>

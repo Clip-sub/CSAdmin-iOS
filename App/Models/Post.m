@@ -1,6 +1,18 @@
 #import "Post.h"
 #import "JSONKeyMapper.h"
 
+@implementation Embedded
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
+            @{
+            @"embeeded": @"_embedded"
+    }];
+}
+
+@end
+
 @implementation FeaturedMedia
 + (JSONKeyMapper *)keyMapper
 {
@@ -23,7 +35,8 @@
             @{
             @"postID": @"id",
             @"title": @"title.rendered",
-            @"excerpt": @"excerpt.rendered"
+            @"excerpt": @"excerpt.rendered",
+            @"featuredMedia": @"_embedded.wp:featuredmedia"
     }];
 }
 

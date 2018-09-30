@@ -1,7 +1,6 @@
 #import "JSONModel.h"
 #import <IGListKit/IGListKit.h>
 
-@class Content;
 @class FeaturedMedia;
 
 @protocol FeaturedMedia
@@ -9,8 +8,8 @@
 @end
 
 // Content sub-model
-@interface Content : JSONModel
-@property (nonatomic) NSString *rendered;
+@interface Embedded : JSONModel
+@property (nonatomic) FeaturedMedia *featuredMedia;
 @end
 
 @interface FeaturedMedia : JSONModel

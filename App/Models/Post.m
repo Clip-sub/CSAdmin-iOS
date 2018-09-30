@@ -6,8 +6,11 @@
 {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
-              @"sourceUrl": @"source_url"
-              }];
+            @"mediaID": @"id",
+            @"sourceUrl": @"source_url",
+            @"mediaType": @"media_type",
+            @"mimeType": @"mime_type"
+    }];
 }
 
 @end

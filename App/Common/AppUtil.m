@@ -9,16 +9,6 @@
     return delegate;
 }
 
-+ (NSString *)stringByStrippingHTML:(NSString *)inputString
-{
-    NSRange r;
-    NSString *s = [inputString mutableCopy];
-
-    while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
-        s = [s stringByReplacingCharactersInRange:r withString:@""];
-    return s;
-}
-
 + (BOOL)isEmpty:(NSString *)value
 {
     if (value == nil || value == NULL || [value isEqual:[NSNull null]] || [value isEqualToString:@""]) {

@@ -4,14 +4,20 @@
 @class Content;
 @class FeaturedMedia;
 
+@protocol FeaturedMedia
+
+@end
+
 // Content sub-model
 @interface Content : JSONModel
 @property (nonatomic) NSString *rendered;
 @end
 
 @interface FeaturedMedia : JSONModel
-@property (nonatomic) NSNumber *mediaID;
+@property (nonatomic) int *mediaID;
 @property (weak, nonatomic) NSString *sourceUrl;
+@property (weak, nonatomic) NSString *mediaType;
+@property (weak, nonatomic) NSString *mimeType;
 @end
 
 // Main Post model
@@ -25,7 +31,8 @@
 @property (nonatomic) NSString *title;
 // @property (weak, nonatomic) NSString *thumbnailUrl;
 
-@property (weak, nonatomic) FeaturedMedia<Optional> *featuredMedia;
+@property (weak, nonatomic) NSArray <FeaturedMedia> *featuredMedia;
+
 @property (nonatomic) NSString *excerpt;
 //@property (nonatomic) Content *content;
 @property (nonatomic) NSNumber *author; // Author ID.

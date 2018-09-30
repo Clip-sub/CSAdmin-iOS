@@ -5,8 +5,6 @@
 
 + (AppDelegate *) appDelegate;
 
-+ (NSString *)stringByStrippingHTML:(NSString *)inputString;
-
 #pragma mark -- Text utils
 
 + (BOOL) isEmpty:(NSString*) value;

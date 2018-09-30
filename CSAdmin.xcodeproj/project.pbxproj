@@ -45,6 +45,7 @@
 		ED565D0C214D88790016F053 /* IGSpinnerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */; };
 		ED6A57E5212ADC2D004C22C3 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */; };
 		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
+		ED83E7202161588200FCB52B /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83E71F2161588200FCB52B /* GTMNSString+HTML.m */; };
 		EDAF3D40214ED55200F944C5 /* PostListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */; };
 		EDAF3D44214EDF7B00F944C5 /* PostItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */; };
 		EDAF3D45214EDF7B00F944C5 /* PostItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */; };
@@ -227,6 +228,8 @@
 		ED6A57E4212ADC2D004C22C3 /* SweetAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		ED6E79232107B45D00BD549F /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		ED6E79242107B45D00BD549F /* Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		ED83E71E2161588200FCB52B /* GTMNSString+HTML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		ED83E71F2161588200FCB52B /* GTMNSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		EDAF3D3E214ED55200F944C5 /* PostListSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListSectionController.h; sourceTree = "<group>"; };
 		EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListSectionController.m; sourceTree = "<group>"; };
 		EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostItemCollectionViewCell.h; sourceTree = "<group>"; };
@@ -473,6 +476,7 @@
 		ED487BDB20EA04A3000D4FFB /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				ED83E7162161586900FCB52B /* GoogleToolbox */,
 				ED02866521073EEC0056E485 /* JSONModel */,
 				ED285C3D20FA88BB0070A63C /* UIApplication-UIID */,
 				ED487CA620EA1AFA000D4FFB /* AFNetworking */,
@@ -538,6 +542,15 @@
 				ED565D0B214D88790016F053 /* IGSpinnerCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ED83E7162161586900FCB52B /* GoogleToolbox */ = {
+			isa = PBXGroup;
+			children = (
+				ED83E71E2161588200FCB52B /* GTMNSString+HTML.h */,
+				ED83E71F2161588200FCB52B /* GTMNSString+HTML.m */,
+			);
+			path = GoogleToolbox;
 			sourceTree = "<group>";
 		};
 		ED89DF03215E829400D44354 /* Linear */ = {
@@ -973,6 +986,7 @@
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,
 				ED487CC220EA1DCF000D4FFB /* ResponseObject.m in Sources */,
 				EDAF3D44214EDF7B00F944C5 /* PostItemCollectionViewCell.m in Sources */,
+				ED83E7202161588200FCB52B /* GTMNSString+HTML.m in Sources */,
 				EDD033AF20F1622E00BFBC3F /* UIWebView+AFNetworking.m in Sources */,
 				ED6E79252107B45D00BD549F /* Category.m in Sources */,
 				ED2BDAAA20E4E3B300D7A8D7 /* LatestCommentsViewController.m in Sources */,

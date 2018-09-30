@@ -2,13 +2,25 @@
 
 @implementation AppUtil
 
-+ (AppDelegate *)appDelegate {
++ (AppDelegate *)appDelegate
+{
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
+
     return delegate;
 }
 
-+ (BOOL)isEmpty:(NSString *)value {
+- (NSString *)stringByStrippingHTML:(NSString *)inputString
+{
+    NSRange r;
+    NSString *s = [inputString mutableCopy];
+
+    while ((r = [s rangeOfString:@"<[^>]+>" options:NSRegularExpressionSearch]).location != NSNotFound)
+        s = [s stringByReplacingCharactersInRange:r withString:@""];
+    return s;
+}
+
++ (BOOL)isEmpty:(NSString *)value
+{
     if (value == nil || value == NULL || [value isEqual:[NSNull null]] || [value isEqualToString:@""]) {
         return TRUE;
     }
@@ -21,10 +33,11 @@
     return FALSE;
 }
 
-+ (BOOL)isValidEmail:(NSString *)email {
++ (BOOL)isValidEmail:(NSString *)email
+{
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    
+
     if ([emailTest evaluateWithObject:[email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]] == NO) {
         return FALSE;
     }
@@ -32,46 +45,50 @@
 }
 
 // Convert RGB color to UIColor.
-+ (UIColor *)getUIColorFromRGB:(NSString *)rgbColor {
++ (UIColor *)getUIColorFromRGB:(NSString *)rgbColor
+{
     unsigned int red, green, blue;
     NSRange range;
-    
+
     range.length = 2;
     range.location = 0;
-    
+
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&red];
     range.location = 2;
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&green];
     range.location = 4;
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&blue];
-    
-    return [UIColor colorWithRed:(float)(red/255.0f) green:(float)(green/255.0f) blue:(float)(blue/255.0f) alpha:1.0f];
+
+    return [UIColor colorWithRed:(float)(red / 255.0f) green:(float)(green / 255.0f) blue:(float)(blue / 255.0f) alpha:1.0f];
 }
 
-+ (UIColor *)getUIColorFromRGB:(NSString *)rgbColor withAlpha:(CGFloat)alpha {
++ (UIColor *)getUIColorFromRGB:(NSString *)rgbColor withAlpha:(CGFloat)alpha
+{
     unsigned int red, green, blue;
     NSRange range;
-    
+
     range.length = 2;
     range.location = 0;
-    
+
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&red];
     range.location = 2;
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&green];
     range.location = 4;
     [[NSScanner scannerWithString:[rgbColor substringWithRange:range]] scanHexInt:&blue];
-    
-    return [UIColor colorWithRed:(float)(red/255.0f) green:(float)(green/255.0f) blue:(float)(blue/255.0f) alpha:alpha];
+
+    return [UIColor colorWithRed:(float)(red / 255.0f) green:(float)(green / 255.0f) blue:(float)(blue / 255.0f) alpha:alpha];
 }
 
-+ (NSString *)getCurrentDeviceID {
++ (NSString *)getCurrentDeviceID
+{
     NSString *uuid = [[UIApplication sharedApplication] uniqueInstallationIdentifier];
     return uuid;
 }
 
-+ (NSString *)base64Encode:(NSString *)value {
++ (NSString *)base64Encode:(NSString *)value
+{
     NSData *nsdata = [value dataUsingEncoding:NSUTF8StringEncoding];
-    
+
     return [NSString stringWithFormat:@"thumb/%@", [nsdata base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]];
 }
 

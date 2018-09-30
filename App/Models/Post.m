@@ -19,7 +19,8 @@
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
             @"postID": @"id",
-            @"title": @"title.rendered"
+            @"title": @"title.rendered",
+            @"excerpt": @"excerpt.rendered"
     }];
 }
 

@@ -17,16 +17,11 @@
 //  the License.
 //
 
-#import "GTMDefines.h"
+//#import "GTMDefines.h"
 #import "GTMNSString+HTML.h"
 
-// Export a nonsense symbol to suppress a libtool warning when this is linked
-// alone in a static lib.
-__attribute__((visibility("default")))
-char GTMNSString_HTMLExportToSuppressLibToolWarning = 0;
-
 typedef struct {
-    NSString *escapeSequence;
+    __unsafe_unretained NSString *escapeSequence;
     unichar uchar;
 } HTMLEscapeMap;
 
@@ -397,7 +392,7 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
         NSMutableData *data = [NSMutableData dataWithLength:length * sizeof(UniChar)];
         if (!data) {
             // COV_NF_START  - Memory fail case
-            _GTMDevLog(@"couldn't alloc buffer");
+            //            _GTMDevLog(@"couldn't alloc buffer");
             return nil;
             // COV_NF_END
         }
@@ -407,7 +402,7 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
 
     if (!buffer || !data2) {
         // COV_NF_START
-        _GTMDevLog(@"Unable to allocate buffer or data2");
+        //        _GTMDevLog(@"Unable to allocate buffer or data2");
         return nil;
         // COV_NF_END
     }
@@ -430,7 +425,7 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
             if (val) {
                 [finalString appendString:val->escapeSequence];
             } else {
-                _GTMDevAssert(escapeUnicode && buffer[i] > 127, @"Illegal Character");
+                //                _GTMDevAssert(escapeUnicode && buffer[i] > 127, @"Illegal Character");
                 [finalString appendFormat:@"&#%d;", buffer[i]];
             }
         } else {
@@ -489,23 +484,12 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
                     NSScanner *scanner = [NSScanner scannerWithString:hexSequence];
                     unsigned value;
                     if ([scanner scanHexInt:&value] &&
+                        value < USHRT_MAX &&
                         value > 0
                         && [scanner scanLocation] == length - 4) {
-                        if (value < USHRT_MAX) {
-                            unichar uchar = (unichar)value;
-                            NSString *charString = [NSString stringWithCharacters:&uchar length:1];
-                            [finalString replaceCharactersInRange:escapeRange withString:charString];
-                        } else if (value >= 0x10000 && value <= 0x10FFFF) {
-                            // code points in unicode supplementary planes
-                            int subtractedValue = value - 0x10000;
-                            unichar uchars[2];
-                            uchars[0] = 0xD800 + (subtractedValue >> 10);
-                            uchars[1] = 0xDC00 + (subtractedValue & 0x3FF);
-                            NSString *charString = [NSString stringWithCharacters:uchars length:2];
-                            if (charString) {
-                                [finalString replaceCharactersInRange:escapeRange withString:charString];
-                            }
-                        }
+                        unichar uchar = value;
+                        NSString *charString = [NSString stringWithCharacters:&uchar length:1];
+                        [finalString replaceCharactersInRange:escapeRange withString:charString];
                     }
                 } else {
                     // Decimal Sequences &#123;
@@ -513,23 +497,12 @@ static int EscapeMapCompare(const void *ucharVoid, const void *mapVoid)
                     NSScanner *scanner = [NSScanner scannerWithString:numberSequence];
                     int value;
                     if ([scanner scanInt:&value] &&
+                        value < USHRT_MAX &&
                         value > 0
                         && [scanner scanLocation] == length - 3) {
-                        if (value < USHRT_MAX) {
-                            unichar uchar = (unichar)value;
-                            NSString *charString = [NSString stringWithCharacters:&uchar length:1];
-                            [finalString replaceCharactersInRange:escapeRange withString:charString];
-                        } else if (value >= 0x10000 && value <= 0x10FFFF) {
-                            // code points in unicode supplementary planes
-                            int subtractedValue = value - 0x10000;
-                            unichar uchars[2];
-                            uchars[0] = 0xD800 + (subtractedValue >> 10);
-                            uchars[1] = 0xDC00 + (subtractedValue & 0x3FF);
-                            NSString *charString = [NSString stringWithCharacters:uchars length:2];
-                            if (charString) {
-                                [finalString replaceCharactersInRange:escapeRange withString:charString];
-                            }
-                        }
+                        unichar uchar = value;
+                        NSString *charString = [NSString stringWithCharacters:&uchar length:1];
+                        [finalString replaceCharactersInRange:escapeRange withString:charString];
                     }
                 }
             } else {

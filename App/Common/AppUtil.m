@@ -9,7 +9,7 @@
     return delegate;
 }
 
-- (NSString *)stringByStrippingHTML:(NSString *)inputString
++ (NSString *)stringByStrippingHTML:(NSString *)inputString
 {
     NSRange r;
     NSString *s = [inputString mutableCopy];

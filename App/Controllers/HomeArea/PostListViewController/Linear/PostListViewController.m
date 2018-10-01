@@ -43,10 +43,6 @@
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@3 success:^(NSArray *postArray) {
         self.posts = [Post arrayOfModelsFromDictionaries:postArray error:nil];
 
-        Post *p = self.posts[0];
-        NSLog(@"%@", postArray[0]);
-        NSLog(@"================================");
-        NSLog(@"%@", [p toJSONString]);
         [self.activityIndicatorView stopAnimating];
         [self.tableView setHidden:NO];
         [self.tableView reloadData];

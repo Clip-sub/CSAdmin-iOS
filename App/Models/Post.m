@@ -7,7 +7,7 @@
 {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:
             @{
-            @"embeeded": @"_embedded"
+              @"featuredMedia": @"wp:featuredmedia"
     }];
 }
 
@@ -36,7 +36,7 @@
             @"postID": @"id",
             @"title": @"title.rendered",
             @"excerpt": @"excerpt.rendered",
-            @"featuredMedia": @"_embedded.wp:featuredmedia"
+            @"embedded": @"_embedded"
     }];
 }
 

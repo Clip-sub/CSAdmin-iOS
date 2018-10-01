@@ -1,15 +1,16 @@
 #import "JSONModel.h"
 #import <IGListKit/IGListKit.h>
 
+@class FeaturedMedia;
 @protocol FeaturedMedia @end
 
 // Content sub-model
 @interface Embedded : JSONModel
-@property (weak, nonatomic) NSArray <Optional, FeaturedMedia> *featuredMedia;
+@property (weak, nonatomic) NSArray <FeaturedMedia> *featuredMedia;
 @end
 
 @interface FeaturedMedia : JSONModel
-@property (nonatomic) int *mediaID;
+@property (nonatomic) NSNumber *mediaID;
 @property (weak, nonatomic) NSString *sourceUrl;
 @property (weak, nonatomic) NSString *mediaType;
 @property (weak, nonatomic) NSString *mimeType;

@@ -2,14 +2,19 @@
 #import <IGListKit/IGListKit.h>
 
 @class FeaturedMedia;
+@class Author;
 
 @protocol Embedded @end
 @protocol FeaturedMedia @end
+@protocol Author;
 
 // Content sub-model
 @interface Embedded : JSONModel
-@property (weak, nonatomic) NSDictionary *author;
-@property (weak, nonatomic) NSArray <FeaturedMedia> *featuredMedia;
+@property (nonatomic) NSArray <Author, Optional> *author;
+@end
+
+@interface Author : JSONModel
+
 @end
 
 @interface FeaturedMedia : JSONModel
@@ -29,10 +34,8 @@
 @property (nonatomic) NSString *status;
 @property (nonatomic) NSString *title;
 
-@property (weak, nonatomic) Embedded *embedded;
+// @property (weak, nonatomic) Embedded *embedded;
 
 @property (nonatomic) NSString *excerpt;
-//@property (nonatomic) Content *content;
-@property (nonatomic) NSNumber *author; // Author ID.
 
 @end

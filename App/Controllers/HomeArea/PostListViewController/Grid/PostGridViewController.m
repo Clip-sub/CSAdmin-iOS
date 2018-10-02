@@ -23,7 +23,6 @@
     for (int i = 1; i < 20; i++) {
         Post *p = [Post new];
         p.status = @"Status";
-        p.author = @12;
         // p.title.rendered = @"ho";
         p.link = @"Test";
         p.date = [NSDate date];

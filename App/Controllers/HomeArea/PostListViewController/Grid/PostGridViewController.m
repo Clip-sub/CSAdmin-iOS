@@ -4,6 +4,8 @@
 #import "IGSpinnerCell.h"
 #import "PostListSectionController.h"
 
+#import "ApiClient+Post.h"
+
 @interface PostGridViewController () <IGListAdapterDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) IGListCollectionView *collectionView;
@@ -19,18 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _posts = [NSMutableArray array];
-    for (int i = 1; i < 20; i++) {
-        Post *p = [Post new];
-        p.status = @"Status";
-        // p.title.rendered = @"ho";
-        p.link = @"Test";
-        p.date = [NSDate date];
-        // p.title.rendered = [@(i) stringValue];
-        [_posts addObject:p];
-    }
+    [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
+        // = [Post arrayOfModelsFromDictionaries:postArray error:nil];
+        
+        
+        [self.posts addObjectsFromArray:[Post arrayOfModelsFromDictionaries:postArray error:nil]];
+        
+        NSLog(@"%lu", (unsigned long)[self.posts count]);
+        
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 
-    NSLog(@"Size is: %zd", [_posts count]);
     [self setupUI];
 }
 

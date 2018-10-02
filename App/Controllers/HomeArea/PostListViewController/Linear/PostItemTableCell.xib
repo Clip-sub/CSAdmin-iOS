@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="PostItemTableCell" rowHeight="100" id="HVJ-qp-9Z3" customClass="PostItemTableCell">
-            <rect key="frame" x="0.0" y="0.0" width="640" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="574" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HVJ-qp-9Z3" id="E1Q-f5-3tM">
-                <rect key="frame" x="0.0" y="0.0" width="640" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="574" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ke5-ML-ztv">
@@ -28,35 +27,34 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Nameca Post Nameca Post Nam Post Nameca" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-xU-zrA">
-                        <rect key="frame" x="120" y="8" width="500" height="18"/>
+                        <rect key="frame" x="120" y="8" width="434" height="18"/>
                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Excerpt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Nl-j5k">
-                        <rect key="frame" x="120" y="34" width="300" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Excerpt" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-Nl-j5k">
+                        <rect key="frame" x="120" y="34" width="72" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="15" id="4lO-Tm-J3o"/>
-                            <constraint firstAttribute="width" constant="300" id="rOQ-tN-oz9"/>
+                            <constraint firstAttribute="height" constant="15" id="kez-H1-253"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69745818661971826" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 comments" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SY-gs-Ip0">
-                        <rect key="frame" x="544.5" y="73" width="75.5" height="16"/>
+                        <rect key="frame" x="478" y="73" width="76" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fM-Hf-B3t">
-                        <rect key="frame" x="462" y="73" width="41" height="16"/>
+                        <rect key="frame" x="395" y="73" width="41" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person" translatesAutoresizingMaskIntoConstraints="NO" id="Qku-BY-FK4">
-                        <rect key="frame" x="440" y="71.5" width="14" height="14"/>
+                        <rect key="frame" x="373" y="71.5" width="14" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="14" id="NZk-fk-YSJ"/>
                             <constraint firstAttribute="height" constant="14" id="llt-X0-PJL"/>
@@ -67,15 +65,16 @@
                     <constraint firstItem="Qku-BY-FK4" firstAttribute="baseline" secondItem="4fM-Hf-B3t" secondAttribute="baseline" id="09A-o2-Whd"/>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="top" secondItem="E1Q-f5-3tM" secondAttribute="top" id="1Gv-HV-aUz"/>
                     <constraint firstItem="4fM-Hf-B3t" firstAttribute="bottom" secondItem="E1Q-f5-3tM" secondAttribute="bottomMargin" id="1Mp-Aw-FUW"/>
+                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="leading" secondItem="Crv-xU-zrA" secondAttribute="leading" id="2tf-mx-4XF"/>
                     <constraint firstAttribute="trailing" secondItem="Crv-xU-zrA" secondAttribute="trailing" constant="20" id="6tE-ja-WTl"/>
-                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="leading" secondItem="Crv-xU-zrA" secondAttribute="leading" id="DY4-KQ-t0A"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="uWT-Nl-j5k" secondAttribute="bottom" constant="40" id="C9b-lH-PJj"/>
                     <constraint firstItem="0SY-gs-Ip0" firstAttribute="bottom" secondItem="E1Q-f5-3tM" secondAttribute="bottomMargin" id="EIR-Mf-BXY"/>
                     <constraint firstAttribute="bottom" secondItem="Ke5-ML-ztv" secondAttribute="bottom" id="FHw-cR-chk"/>
                     <constraint firstItem="0SY-gs-Ip0" firstAttribute="trailing" secondItem="E1Q-f5-3tM" secondAttribute="trailingMargin" id="Ghc-VR-qNk"/>
                     <constraint firstItem="4fM-Hf-B3t" firstAttribute="leading" secondItem="Qku-BY-FK4" secondAttribute="trailing" constant="8" id="Niq-1c-JdQ"/>
                     <constraint firstItem="Ke5-ML-ztv" firstAttribute="leading" secondItem="E1Q-f5-3tM" secondAttribute="leading" id="Phg-vB-dGL"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="leading" secondItem="Ke5-ML-ztv" secondAttribute="trailing" constant="20" id="ckg-G6-tsp"/>
-                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="top" secondItem="Crv-xU-zrA" secondAttribute="bottom" constant="8" symbolic="YES" id="lQd-X3-E86"/>
+                    <constraint firstItem="uWT-Nl-j5k" firstAttribute="top" secondItem="Crv-xU-zrA" secondAttribute="bottom" constant="8" symbolic="YES" id="i0w-2b-5Zu"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="top" secondItem="E1Q-f5-3tM" secondAttribute="top" constant="8" id="nx1-H9-TH3"/>
                     <constraint firstItem="Crv-xU-zrA" firstAttribute="leading" secondItem="Ke5-ML-ztv" secondAttribute="trailing" constant="20" id="oAK-x8-LuI"/>
                     <constraint firstItem="0SY-gs-Ip0" firstAttribute="leading" secondItem="4fM-Hf-B3t" secondAttribute="trailing" constant="42" id="uZm-RI-vpG"/>
@@ -86,7 +85,7 @@
                 <outlet property="postTitle" destination="Crv-xU-zrA" id="QVL-18-owk"/>
                 <outlet property="thumbnailImageView" destination="Ke5-ML-ztv" id="3Vl-gi-oXt"/>
             </connections>
-            <point key="canvasLocation" x="43" y="-86"/>
+            <point key="canvasLocation" x="-20.625" y="-86.619718309859152"/>
         </tableViewCell>
     </objects>
     <resources>

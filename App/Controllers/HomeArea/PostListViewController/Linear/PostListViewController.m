@@ -65,8 +65,8 @@
 
     Post *post = [self.posts objectAtIndex:indexPath.row];
     cell.postTitle.text = post.title;
-    cell.postExcerpt.text = [post.excerpt stringByConvertingHTMLToPlainText];
-    
+    cell.postExcerpt.text = [[post.excerpt stringByConvertingHTMLToPlainText] substringToIndex:24];
+
     NSLog(@"%@", post);
 
     NSURL *url = [[NSURL alloc] initWithString:@"https://media.discordapp.net/attachments/452300203144511491/481174613682815005/unknown.png?width=800&height=450"];

@@ -21,19 +21,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _posts = [NSMutableArray array];
+    
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
         // = [Post arrayOfModelsFromDictionaries:postArray error:nil];
+        [self->_posts addObjectsFromArray:[Post arrayOfModelsFromDictionaries:postArray error:nil]];
         
-        
-        [self.posts addObjectsFromArray:[Post arrayOfModelsFromDictionaries:postArray error:nil]];
-        
-        NSLog(@"%lu", (unsigned long)[self.posts count]);
+        [self setupUI];
         
     } failure:^(NSError *error) {
         NSLog(@"%@", error);
     }];
-
-    [self setupUI];
 }
 
 - (void)didReceiveMemoryWarning {

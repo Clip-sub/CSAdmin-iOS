@@ -21,11 +21,12 @@
     [super viewDidLoad];
     
     _posts = [NSMutableArray array];
+    [self.view addSubview:self.collectionView];
     
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
         [self->_posts addObjectsFromArray:[Post arrayOfModelsFromDictionaries:postArray error:nil]];
         
-        [self setupUI];
+        // [self setupUI];
         
     } failure:^(NSError *error) {
         NSLog(@"%@", error);
@@ -44,7 +45,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: Mai not
-    PostItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostItem" forIndexPath:indexPath];
+    PostItemCollectionViewCell *cell = [[PostItemCollectionViewCell alloc] init];
+    NSLog(@"Called %@ times", indexPath);
     return cell;
 }
 
@@ -52,15 +54,13 @@
     return 24.0;
 }
 
-- (void) setupUI {
-    [self.view addSubview:self.collectionView];
-}
-
 - (UICollectionView *) collectionView {
     if (!_collectionView) {
         CustomFlowLayout *layout = [CustomFlowLayout new];
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        NSLog(@"Here 1");
     }
+    NSLog(@"Here 2");
     return _collectionView;
 }
 

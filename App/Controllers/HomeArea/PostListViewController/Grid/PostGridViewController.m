@@ -121,7 +121,11 @@
 
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
-        UICollectionViewLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        
+        NSInteger numberOfColumns = 3;
+        CGFloat itemWidth = (CGRectGetWidth(self.collectionView.frame) - (numberOfColumns - 1)) / numberOfColumns;
+        layout.itemSize = CGSizeMake(itemWidth, itemWidth);
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }
     return _collectionView;

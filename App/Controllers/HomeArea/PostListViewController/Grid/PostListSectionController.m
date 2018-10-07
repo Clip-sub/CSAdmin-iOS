@@ -27,7 +27,7 @@
 {
     PostItemCollectionViewCell *cell
         = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
-    cell.postTitle.text = @"Yolo";
+    cell.postTitle.text = [NSString stringWithFormat:@"Yolo %ld", (long)index];
     return cell;
 }
 

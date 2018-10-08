@@ -11,7 +11,7 @@
 
 @implementation PostListSectionController
 
-- (instancetype)initWithItems: (NSArray *) items
+- (instancetype)initWithItems: (NSArray<Post *> *) items
 {
     self = [super init];
     if (self) {
@@ -22,7 +22,7 @@
 
 - (NSInteger)numberOfItems
 {
-    return 1; // One item per array item.
+    return [self.posts count]; // One item per array item.
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index

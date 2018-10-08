@@ -12,5 +12,6 @@
 @interface PostListSectionController : IGListSectionController
 @property (nonatomic, copy) NSArray *posts;
 
-- (instancetype) initWithItems: (NSArray *) items;
+- (instancetype) initWithItems: (NSArray<Post *> *) items;
+
 @end

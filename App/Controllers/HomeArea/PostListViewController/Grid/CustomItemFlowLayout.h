@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IGListKit/IGListKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomItemFlowLayout : UICollectionViewFlowLayout
+@interface CustomItemFlowLayout : IGListCollectionViewLayout
 
 @end
 

@@ -10,18 +10,7 @@
 
 @implementation CustomItemFlowLayout
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.minimumLineSpacing = 1.0;
-        self.minimumInteritemSpacing = 1.0;
-        self.scrollDirection = UICollectionViewScrollDirectionVertical;
-    }
-    return self;
-}
-
-- (CGSize)itemSize
+- (CGSize) itemSize
 {
     NSInteger numberOfColumns = 3;
     CGFloat itemWidth = (CGRectGetWidth(self.collectionView.frame) - (numberOfColumns - 1)) / numberOfColumns;

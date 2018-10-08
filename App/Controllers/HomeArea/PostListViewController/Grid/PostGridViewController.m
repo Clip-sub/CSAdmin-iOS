@@ -39,14 +39,19 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    self.collectionView.dataSource = self;
     self.collectionView.frame = self.view.bounds;
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"PostItemCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"PostItem"];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Mai not
-    PostItemCollectionViewCell *cell = [[PostItemCollectionViewCell alloc] init];
+
+    PostItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostItem" forIndexPath:indexPath];
+    
     NSLog(@"Called %@ times", indexPath);
+    cell.postTitle.text = [NSString stringWithFormat:@"P %ld", (long)indexPath.row];
     return cell;
 }
 
@@ -58,9 +63,7 @@
     if (!_collectionView) {
         CustomFlowLayout *layout = [CustomFlowLayout new];
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-        NSLog(@"Here 1");
     }
-    NSLog(@"Here 2");
     return _collectionView;
 }
 

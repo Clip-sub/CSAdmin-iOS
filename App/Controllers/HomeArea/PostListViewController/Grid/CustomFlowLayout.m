@@ -25,7 +25,7 @@
     NSInteger numberOfColumns = 3;
     
     CGFloat itemWidth = (CGRectGetWidth(self.collectionView.frame) - (numberOfColumns - 1)) / numberOfColumns;
-    return CGSizeMake(itemWidth, itemWidth);
+    return CGSizeMake(itemWidth, itemWidth + 50);
 }
 
 @end

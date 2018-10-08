@@ -53,9 +53,6 @@
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
     NSMutableArray *items = [_posts mutableCopy];
-    
-    NSLog(@"Number of items: %lu", (unsigned long)[items count]);
-    
     return items;
 }
 
@@ -80,7 +77,7 @@
 
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
-        CustomItemFlowLayout *layout = [[CustomItemFlowLayout alloc] initWithStickyHeaders:NO topContentInset:0 stretchToEdge:YES];
+        CustomItemFlowLayout *layout = [CustomItemFlowLayout alloc];
 
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }

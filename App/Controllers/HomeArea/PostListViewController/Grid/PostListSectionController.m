@@ -34,9 +34,11 @@
 
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index
 {
+    NSLog(@"called %ld", (long)index);
     PostItemCollectionViewCell *cell
     = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
     cell.postTitle.text = [NSString stringWithFormat:@"Yolo %ld", (long)index];
+    
     return cell;
 }
 

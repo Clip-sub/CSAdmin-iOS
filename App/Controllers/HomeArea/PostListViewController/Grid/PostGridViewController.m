@@ -50,7 +50,6 @@
 
     PostItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PostItem" forIndexPath:indexPath];
     
-    NSLog(@"Called %@ times", indexPath);
     cell.postTitle.text = [NSString stringWithFormat:@"P %ld", (long)indexPath.row];
     return cell;
 }

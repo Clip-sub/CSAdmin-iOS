@@ -10,5 +10,7 @@
 #import "Post.h"
 
 @interface PostListSectionController : IGListSectionController
-@property (nonatomic, copy) Post *post;
+@property (nonatomic, copy) NSArray *posts;
+
+- (instancetype) initWithItems: (NSArray *) items;
 @end

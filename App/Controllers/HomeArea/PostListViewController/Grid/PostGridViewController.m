@@ -4,6 +4,8 @@
 #import "IGSpinnerCell.h"
 #import "PostListSectionController.h"
 
+#import "CustomItemFlowLayout.h"
+
 #import "ApiClient+Post.h"
 
 @interface PostGridViewController () <IGListAdapterDataSource, UIScrollViewDelegate>
@@ -20,13 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _posts = [NSMutableArray array];
-    
+    self.posts = [NSMutableArray array];
     [[ApiClient sharedClient] getLatestPosts:@1 perPage:@10 success:^(NSArray *postArray) {
         // = [Post arrayOfModelsFromDictionaries:postArray error:nil];
         [self->_posts addObjectsFromArray:[Post arrayOfModelsFromDictionaries:postArray error:nil]];
-        
+
         [self setupUI];
         
     } failure:^(NSError *error) {
@@ -54,9 +54,9 @@
 
 - (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
     NSMutableArray *items = [_posts mutableCopy];
-    if (self.isLoading) {
-        [items addObject:self.spinObject];
-    }
+    
+    NSLog(@"Number of items: %lu", (unsigned long)[items count]);
+    
     return items;
 }
 
@@ -73,7 +73,7 @@
 //        return [PostListSectionController new];
 //    }
     
-    return [PostListSectionController new];
+    return [[PostListSectionController alloc] initWithItems:object];
 }
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
@@ -121,11 +121,7 @@
 
 - (IGListCollectionView *) collectionView {
     if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        
-        NSInteger numberOfColumns = 3;
-        CGFloat itemWidth = (CGRectGetWidth(self.collectionView.frame) - (numberOfColumns - 1)) / numberOfColumns;
-        layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+        UICollectionViewLayout *layout = [[CustomItemFlowLayout alloc] init];
         _collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero listCollectionViewLayout:layout];
     }
     return _collectionView;

@@ -11,9 +11,18 @@
 
 @implementation PostListSectionController
 
+- (instancetype)initWithItems: (NSArray *) items
+{
+    self = [super init];
+    if (self) {
+        self.posts = items;
+    }
+    return self;
+}
+
 - (NSInteger)numberOfItems
 {
-    return 3; // One item per array item.
+    return 1; // One item per array item.
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index
@@ -26,19 +35,9 @@
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index
 {
     PostItemCollectionViewCell *cell
-        = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
-    cell.postTitle.text = @"Yolo";
+    = [self.collectionContext dequeueReusableCellWithNibName:@"PostItemCollectionViewCell" bundle:nil forSectionController:self atIndex:index];
+    cell.postTitle.text = [NSString stringWithFormat:@"Yolo %ld", (long)index];
     return cell;
-}
-
-- (void)didUpdateToObject:(id)object
-{
-    self.post = object;
-}
-
-- (void)didSelectItemAtIndex:(NSInteger)index
-{
-    // Code...
 }
 
 @end

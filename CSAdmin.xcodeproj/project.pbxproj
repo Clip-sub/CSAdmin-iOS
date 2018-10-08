@@ -58,6 +58,7 @@
 		EDB0145120E20266006DED66 /* CSAdminUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0145020E20266006DED66 /* CSAdminUITests.m */; };
 		EDB0146320E202B4006DED66 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0146120E202B4006DED66 /* TutorialViewController.m */; };
 		EDB0146420E202B4006DED66 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB0146220E202B4006DED66 /* TutorialViewController.xib */; };
+		EDCBF636216B73E100548F6B /* CustomItemFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCBF635216B73E100548F6B /* CustomItemFlowLayout.m */; };
 		EDD033A320F1622E00BFBC3F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338320F1622D00BFBC3F /* AFURLResponseSerialization.m */; };
 		EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338420F1622D00BFBC3F /* AFHTTPSessionManager.m */; };
 		EDD033A520F1622E00BFBC3F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD0338620F1622D00BFBC3F /* AFURLSessionManager.m */; };
@@ -254,6 +255,8 @@
 		EDB0146020E202B4006DED66 /* TutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		EDB0146120E202B4006DED66 /* TutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		EDB0146220E202B4006DED66 /* TutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
+		EDCBF634216B73E100548F6B /* CustomItemFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomItemFlowLayout.h; sourceTree = "<group>"; };
+		EDCBF635216B73E100548F6B /* CustomItemFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomItemFlowLayout.m; sourceTree = "<group>"; };
 		EDD0336220F1622D00BFBC3F /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		EDD0337B20F1622D00BFBC3F /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
 		EDD0337C20F1622D00BFBC3F /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -583,6 +586,8 @@
 				EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */,
 				ED0C82762151806000D1AC2A /* IGSpinnerCell.h */,
 				ED0C82772151806000D1AC2A /* IGSpinnerCell.m */,
+				EDCBF634216B73E100548F6B /* CustomItemFlowLayout.h */,
+				EDCBF635216B73E100548F6B /* CustomItemFlowLayout.m */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -983,6 +988,7 @@
 				EDD033A320F1622E00BFBC3F /* AFURLResponseSerialization.m in Sources */,
 				ED02868A21073EEC0056E485 /* JSONAPI.m in Sources */,
 				ED02868321073EEC0056E485 /* JSONValueTransformer.m in Sources */,
+				EDCBF636216B73E100548F6B /* CustomItemFlowLayout.m in Sources */,
 				ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */,
 				EDD033AA20F1622E00BFBC3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				EDD033AB20F1622E00BFBC3F /* AFNetworkActivityIndicatorManager.m in Sources */,

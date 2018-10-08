@@ -10,14 +10,16 @@
 
 @implementation PostItemCollectionViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
     // Initialization code
     [self.thumbnail setImageWithURL:[NSURL URLWithString:@"https://loremflickr.com/320/320"]];
 }
 
-- (void)prepareForReuse {
-    [super prepareForReuse];    
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
 }
 
 @end

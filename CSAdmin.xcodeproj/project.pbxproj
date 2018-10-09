@@ -18,7 +18,6 @@
 		ED02868E21073F1C0056E485 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED02868D21073F1C0056E485 /* Post.m */; };
 		ED0286912107403C0056E485 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0286902107403C0056E485 /* Comment.m */; };
 		ED028693210744BD0056E485 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED028692210744BD0056E485 /* SystemConfiguration.framework */; };
-		ED0C82782151806000D1AC2A /* IGSpinnerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0C82772151806000D1AC2A /* IGSpinnerCell.m */; };
 		ED1E186E21502FFD00790D8C /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; };
 		ED1E18702150393D00790D8C /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED1E186D21502FFD00790D8C /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = ED23B71E20F891CC009B4725 /* ApiClient+Post.m */; };
@@ -47,7 +46,6 @@
 		ED6E79252107B45D00BD549F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E79242107B45D00BD549F /* Category.m */; };
 		ED83E7202161588200FCB52B /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83E71F2161588200FCB52B /* GTMNSString+HTML.m */; };
 		ED83E7232161591A00FCB52B /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83E7222161591A00FCB52B /* NSString+HTML.m */; };
-		EDAF3D40214ED55200F944C5 /* PostListSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */; };
 		EDAF3D44214EDF7B00F944C5 /* PostItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */; };
 		EDAF3D45214EDF7B00F944C5 /* PostItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */; };
 		EDB0142E20E20264006DED66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB0142D20E20264006DED66 /* AppDelegate.m */; };
@@ -184,8 +182,6 @@
 		ED0286902107403C0056E485 /* Comment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		ED028692210744BD0056E485 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		ED0BB1D420F883050069146C /* CS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CS-Prefix.pch"; sourceTree = "<group>"; };
-		ED0C82762151806000D1AC2A /* IGSpinnerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGSpinnerCell.h; sourceTree = "<group>"; };
-		ED0C82772151806000D1AC2A /* IGSpinnerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGSpinnerCell.m; sourceTree = "<group>"; };
 		ED1E186D21502FFD00790D8C /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		ED23B71D20F891CC009B4725 /* ApiClient+Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApiClient+Post.h"; sourceTree = "<group>"; };
 		ED23B71E20F891CC009B4725 /* ApiClient+Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ApiClient+Post.m"; sourceTree = "<group>"; };
@@ -234,8 +230,6 @@
 		ED83E71F2161588200FCB52B /* GTMNSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		ED83E7212161591A00FCB52B /* NSString+HTML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		ED83E7222161591A00FCB52B /* NSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
-		EDAF3D3E214ED55200F944C5 /* PostListSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostListSectionController.h; sourceTree = "<group>"; };
-		EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostListSectionController.m; sourceTree = "<group>"; };
 		EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostItemCollectionViewCell.h; sourceTree = "<group>"; };
 		EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostItemCollectionViewCell.m; sourceTree = "<group>"; };
 		EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostItemCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -579,13 +573,9 @@
 			children = (
 				ED565D06214D87C30016F053 /* PostGridViewController.h */,
 				ED565D07214D87C30016F053 /* PostGridViewController.m */,
-				EDAF3D3E214ED55200F944C5 /* PostListSectionController.h */,
-				EDAF3D3F214ED55200F944C5 /* PostListSectionController.m */,
 				EDAF3D41214EDF7B00F944C5 /* PostItemCollectionViewCell.h */,
 				EDAF3D42214EDF7B00F944C5 /* PostItemCollectionViewCell.m */,
 				EDAF3D43214EDF7B00F944C5 /* PostItemCollectionViewCell.xib */,
-				ED0C82762151806000D1AC2A /* IGSpinnerCell.h */,
-				ED0C82772151806000D1AC2A /* IGSpinnerCell.m */,
 				EDCBF634216B73E100548F6B /* CustomItemFlowLayout.h */,
 				EDCBF635216B73E100548F6B /* CustomItemFlowLayout.m */,
 			);
@@ -971,7 +961,6 @@
 				ED0286912107403C0056E485 /* Comment.m in Sources */,
 				ED02868B21073EEC0056E485 /* JSONModel+networking.m in Sources */,
 				ED26165720F7E5AA0063957E /* CSNavigationViewController.m in Sources */,
-				EDAF3D40214ED55200F944C5 /* PostListSectionController.m in Sources */,
 				EDDBEC6C20FC504500EB3DEF /* AppUIHelper.m in Sources */,
 				ED23B71F20F891CC009B4725 /* ApiClient+Post.m in Sources */,
 				ED23B72720F8C5BD009B4725 /* ApiAuthClient.m in Sources */,
@@ -992,7 +981,6 @@
 				ED53A23320FF20F00083E967 /* HomeTabViewController.m in Sources */,
 				EDD033AA20F1622E00BFBC3F /* UIRefreshControl+AFNetworking.m in Sources */,
 				EDD033AB20F1622E00BFBC3F /* AFNetworkActivityIndicatorManager.m in Sources */,
-				ED0C82782151806000D1AC2A /* IGSpinnerCell.m in Sources */,
 				EDD033AC20F1622E00BFBC3F /* UIImageView+AFNetworking.m in Sources */,
 				EDD033A420F1622E00BFBC3F /* AFHTTPSessionManager.m in Sources */,
 				EDD033A620F1622E00BFBC3F /* AFURLRequestSerialization.m in Sources */,

@@ -1,2 +1,2 @@
 github "Instagram/IGListKit" "3.4.0"
-github "rs/SDWebImage" "4.4.2"
+github "rs/SDWebImage" "5.0.0"
